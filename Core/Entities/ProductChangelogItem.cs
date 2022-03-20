@@ -1,4 +1,4 @@
-namespace pa_version_analyzer.Core.Entities;
+namespace PaChangelogAnalyzer.Core.Entities;
 
 public class ProductChangeLogItem
 {

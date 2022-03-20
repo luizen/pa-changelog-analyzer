@@ -1,11 +1,11 @@
 using AngleSharp;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using pa_version_analyzer.Config;
-using pa_version_analyzer.Core.Entities;
-using pa_version_analyzer.Core.Interfaces;
+using PaChangelogAnalyzer.Config;
+using PaChangelogAnalyzer.Core.Entities;
+using PaChangelogAnalyzer.Core.Interfaces;
 
-namespace pa_version_analyzer.Infrastructure.WebScraper;
+namespace PaChangelogAnalyzer.Infrastructure.WebScraper;
 
 public class WebScraper : IWebScraper
 {

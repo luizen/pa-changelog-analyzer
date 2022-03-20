@@ -1,9 +1,9 @@
 using LiteDB;
 using Microsoft.Extensions.Logging;
-using pa_version_analyzer.Core.Entities;
-using pa_version_analyzer.Core.Interfaces;
+using PaChangelogAnalyzer.Core.Entities;
+using PaChangelogAnalyzer.Core.Interfaces;
 
-namespace pa_version_analyzer.Infrastructure.Repositories;
+namespace PaChangelogAnalyzer.Infrastructure.Repositories;
 
 public class ProductChangelogRepository : IProductChangelogRepository
 {

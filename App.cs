@@ -1,8 +1,7 @@
-
-using AngleSharp;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using pa_version_analyzer.Core.Interfaces;
+using PaChangelogAnalyzer.Core.Interfaces;
+
+namespace PaChangelogAnalyzer;
 
 internal class App
 {

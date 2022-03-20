@@ -1,4 +1,4 @@
-namespace pa_version_analyzer.Config;
+namespace PaChangelogAnalyzer.Config;
 
 public class WebScraperOptions
 {

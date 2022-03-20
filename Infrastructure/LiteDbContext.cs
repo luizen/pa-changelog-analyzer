@@ -1,8 +1,8 @@
 using LiteDB;
 using Microsoft.Extensions.Options;
-using pa_version_analyzer.Config;
+using PaChangelogAnalyzer.Config;
 
-namespace pa_version_analyzer.Infrastructure;
+namespace PaChangelogAnalyzer.Infrastructure;
 
 public class LiteDbContext : ILiteDbContext
 {

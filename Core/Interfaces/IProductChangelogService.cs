@@ -1,6 +1,6 @@
-using pa_version_analyzer.Core.Entities;
+using PaChangelogAnalyzer.Core.Entities;
 
-namespace pa_version_analyzer.Core.Interfaces;
+namespace PaChangelogAnalyzer.Core.Interfaces;
 
 public interface IProductChangelogService
 {

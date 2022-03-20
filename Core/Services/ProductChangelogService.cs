@@ -1,8 +1,8 @@
 using Microsoft.Extensions.Logging;
-using pa_version_analyzer.Core.Entities;
-using pa_version_analyzer.Core.Interfaces;
+using PaChangelogAnalyzer.Core.Entities;
+using PaChangelogAnalyzer.Core.Interfaces;
 
-namespace pa_version_analyzer.Core.Services;
+namespace PaChangelogAnalyzer.Core.Services;
 
 public class ProductChangelogService : IProductChangelogService
 {

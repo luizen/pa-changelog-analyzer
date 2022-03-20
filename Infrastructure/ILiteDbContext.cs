@@ -1,6 +1,6 @@
 using LiteDB;
 
-namespace pa_version_analyzer.Infrastructure;
+namespace PaChangelogAnalyzer.Infrastructure;
 
 public interface ILiteDbContext
 {

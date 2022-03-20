@@ -1,14 +1,16 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using pa_version_analyzer.Config;
-using pa_version_analyzer.Core.Interfaces;
-using pa_version_analyzer.Core.Services;
-using pa_version_analyzer.Infrastructure;
-using pa_version_analyzer.Infrastructure.Repositories;
-using pa_version_analyzer.Infrastructure.WebScraper;
+using PaChangelogAnalyzer.Config;
+using PaChangelogAnalyzer.Core.Interfaces;
+using PaChangelogAnalyzer.Core.Services;
+using PaChangelogAnalyzer.Infrastructure;
+using PaChangelogAnalyzer.Infrastructure.Repositories;
+using PaChangelogAnalyzer.Infrastructure.WebScraper;
 using Serilog;
 using Serilog.Events;
+
+namespace PaChangelogAnalyzer;
 
 public class Program
 {
