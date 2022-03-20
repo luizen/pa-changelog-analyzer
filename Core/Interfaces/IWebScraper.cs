@@ -4,5 +4,5 @@ namespace pa_version_analyzer.Core.Interfaces;
 
 public interface IWebScraper
 {
-    Task<IEnumerable<ProductChangelogItem>> GetAllProductChangelogItems();
+    Task<IEnumerable<ProductChangeLogItem>> GetAllProductChangelogItems();
 }

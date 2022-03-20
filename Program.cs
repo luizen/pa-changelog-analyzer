@@ -10,39 +10,11 @@ using pa_version_analyzer.Infrastructure.WebScraper;
 using Serilog;
 using Serilog.Events;
 
-// // Setup Host
-// var host = CreateDefaultBuilder().Build();
-
-// // Invoke Worker
-// using IServiceScope serviceScope = host.Services.CreateScope();
-// IServiceProvider provider = serviceScope.ServiceProvider;
-
-// var workerInstance = provider.GetRequiredService<App>();
-// await workerInstance.DoWork2();
-
-// host.Run();
-
-// // Console.Read();
-
-
-// static IHostBuilder CreateDefaultBuilder()
-// {
-//     return Host.CreateDefaultBuilder()
-//         .ConfigureAppConfiguration(app =>
-//         {
-//             app.AddJsonFile("appsettings.json");
-//         })
-//         .ConfigureServices(services =>
-//         {
-//             services.AddSingleton<App>();
-//         });
-// }
-
-class Program
+public class Program
 {
     private static IConfigurationRoot? configuration;
 
-    private static async Task<int> Main(string[] args)
+    public static async Task<int> Main(string[] args)
     {
         Log.Logger = new LoggerConfiguration()
             .MinimumLevel.Debug()
@@ -51,7 +23,6 @@ class Program
             .WriteTo.Console()
             .CreateLogger();
 
-        Log.Debug("Building host");
         var host = BuildHost(args);
 
         using (var serviceScope = host.Services.CreateScope())
@@ -60,15 +31,9 @@ class Program
 
             try
             {
-                // Log.Debug("Parsing arguments");
-                // var arguments = ParseArguments(args);
-
-                Log.Debug("Starting application");
                 var app = services.GetRequiredService<App>();
-                // await app.Run(arguments);
                 await app.Run();
 
-                Log.Debug("Returning 0");
                 return 0;
             }
             catch (Exception ex)
@@ -83,8 +48,10 @@ class Program
         }
     }
 
-    public static IHost BuildHost(string[] args)
+    private static IHost BuildHost(string[] args)
     {
+        Log.Debug("Building host...");
+
         return new HostBuilder()
             .ConfigureServices(ConfigureServices)
             .UseSerilog()
@@ -93,6 +60,7 @@ class Program
 
     private static void ConfigureServices(IServiceCollection serviceCollection)
     {
+        // Add logging
         serviceCollection.AddLogging();
 
         // Build configuration
@@ -113,6 +81,7 @@ class Program
             .AddTransient<IProductChangelogRepository, ProductChangelogRepository>()
             .AddTransient<IWebScraper, WebScraper>();
 
+        // Add options/settings
         serviceCollection.Configure<LiteDbOptions>(configuration.GetSection("LiteDbOptions"));
         serviceCollection.Configure<WebScraperOptions>(configuration.GetSection("WebScraperOptions"));
 

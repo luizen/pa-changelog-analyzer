@@ -17,7 +17,8 @@ public class ProductChangelogRepository : IProductChangelogRepository
         this.logger = logger;
         this.dbContext = dbContext;
     }
-    public IEnumerable<ProductChangelogItem> GetAllChangelogItems()
+    
+    public IEnumerable<ProductChangeLogItem> GetAllChangelogItems()
     {
         throw new NotImplementedException();
     }

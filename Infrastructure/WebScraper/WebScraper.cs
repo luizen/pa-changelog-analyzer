@@ -18,55 +18,44 @@ public class WebScraper : IWebScraper
         this.options = options;
     }
 
-    public async Task<IEnumerable<ProductChangelogItem>> GetAllProductChangelogItems()
+    public async Task<IEnumerable<ProductChangeLogItem>> GetAllProductChangelogItems()
     {
+        logger.LogDebug("GetAllProductChangelogItems");
+        logger.LogDebug("Options = {Options}", options);
+
         var config = Configuration.Default.WithDefaultLoader();
         var context = BrowsingContext.New(config);
-        var url = options.Value.Url;
-        var result = new List<ProductChangelogItem>();
+        var document = await context.OpenAsync(options.Value.Url);
 
-        var document = await context.OpenAsync(url);
-        var selector = options.Value.Selector;
-        var elements = document.QuerySelectorAll(selector);
+        var pluginNameElements = document.QuerySelectorAll(options.Value.PluginNamesSelector);
+        var changeLogElements = document.QuerySelectorAll(options.Value.ChangeLogsSelector);
 
-        foreach (var element in elements)
+        var pluginNameItemsCount = pluginNameElements.Length;
+        var changeLogItemsCount = changeLogElements.Length;
+
+        if (pluginNameItemsCount != changeLogItemsCount)
         {
-            var text = element.TextContent;
-            var html = element.InnerHtml;
-            var pluginName = GetPluginName(html);
-            var changelog = GetChangeLog(html);
+            var errorMsg = "The number of plugin name items is different than the number of change log items.";
+            logger.LogDebug(errorMsg + " PluginNameItemsCount = {PluginNameItemsCount}; ChangeLogItemsCount = {ChangeLogItemsCount}", pluginNameItemsCount, changeLogItemsCount);
+            throw new InvalidOperationException(errorMsg);
+        }
 
-            result.Add(new ProductChangelogItem()
+        var result = new List<ProductChangeLogItem>();
+        for (int i = 0; i < pluginNameItemsCount; i++)
+        {
+            var item = new ProductChangeLogItem()
             {
-                Name = pluginName,
-                Changelog = changelog
-            });
+                Name = pluginNameElements[i].TextContent,
+                Changelog = changeLogElements[i].InnerHtml
+            };
 
-            // yield return new ProductChangelogItem()
-            // {
-            //     Name = pluginName,
-            //     Changelog = changelog
-            // };
+            result.Add(item);
+
+            logger.LogDebug("----------------------------------------------");
+            logger.LogDebug("Plugin name = {PluginName}", item.Name);
+            logger.LogDebug("Change log = {ChangeLog}", item.Changelog);
         }
 
         return result;
     }
-
-    private string GetChangeLog(string html)
-    {
-        var brbr = "<br><br>";
-        var indexBr = html.IndexOf(brbr) + brbr.Length;
-        var res = html.Substring(indexBr);
-        return res;
-    }
-
-    private string GetPluginName(string html)
-    {
-        var indexBr = html.IndexOf("<br>");
-        var a1 = html.Substring(0, indexBr);
-        var a2 = a1.Replace("<p>", "").Replace("Changelog", "").Replace(" - ", "");
-
-        return a2;
-    }
-
 }

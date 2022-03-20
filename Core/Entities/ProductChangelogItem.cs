@@ -1,6 +1,6 @@
 namespace pa_version_analyzer.Core.Entities;
 
-public class ProductChangelogItem
+public class ProductChangeLogItem
 {
     public string Name { get; set; } = string.Empty;
 

@@ -6,5 +6,5 @@ public interface IProductChangelogRepository
 {
     int InitializeDb();
 
-    IEnumerable<ProductChangelogItem> GetAllChangelogItems();
+    IEnumerable<ProductChangeLogItem> GetAllChangelogItems();
 }

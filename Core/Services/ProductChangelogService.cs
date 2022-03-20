@@ -15,7 +15,7 @@ public class ProductChangelogService : IProductChangelogService
         this.repository = repository;
     }
 
-    public IEnumerable<ProductChangelogItem> GetAllChangelogItems()
+    public IEnumerable<ProductChangeLogItem> GetAllChangelogItems()
     {
         return repository.GetAllChangelogItems();
     }
