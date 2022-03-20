@@ -1,1 +1,1 @@
-# pa-version-analyzer
+# pa-changelog-analyzer

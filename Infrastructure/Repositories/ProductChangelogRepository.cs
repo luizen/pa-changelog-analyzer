@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using LiteDB;
 using Microsoft.Extensions.Logging;
 using PaChangelogAnalyzer.Core.Entities;

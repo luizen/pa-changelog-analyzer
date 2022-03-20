@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using PaChangelogAnalyzer.Core.Entities;
 
 namespace PaChangelogAnalyzer.Core.Interfaces;
