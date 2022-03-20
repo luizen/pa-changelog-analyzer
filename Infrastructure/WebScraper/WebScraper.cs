@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using AngleSharp;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;

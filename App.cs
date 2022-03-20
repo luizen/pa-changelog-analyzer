@@ -1,4 +1,3 @@
-using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using PaChangelogAnalyzer.Core.Interfaces;
 
@@ -23,7 +22,7 @@ internal class App
     {
         logger.LogDebug("Running application...");
 
-        
+
     }
 
 }

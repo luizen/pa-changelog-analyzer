@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using PaChangelogAnalyzer.Core.Entities;
 
 namespace PaChangelogAnalyzer.Core.Interfaces;

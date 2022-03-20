@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using Microsoft.Extensions.Logging;
 using PaChangelogAnalyzer.Core.Entities;
 using PaChangelogAnalyzer.Core.Interfaces;
