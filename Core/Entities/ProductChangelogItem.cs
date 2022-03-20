@@ -2,7 +2,7 @@ namespace pa_version_analyzer.Core.Entities;
 
 public class ProductChangelogItem
 {
-    public string Name { get; set; }
+    public string Name { get; set; } = string.Empty;
 
-    public string Changelog { get; set; }
+    public string Changelog { get; set; } = string.Empty;
 }
