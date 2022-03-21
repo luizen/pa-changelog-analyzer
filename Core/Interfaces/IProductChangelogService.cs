@@ -4,7 +4,9 @@ namespace PaChangelogAnalyzer.Core.Interfaces;
 
 public interface IProductChangelogService
 {
-    int InitializeDb();
+    int InitializeDb(IEnumerable<ProductChangeLogItem> items);
 
-    IEnumerable<ProductChangeLogItem> GetAllChangelogItems();
+    IEnumerable<ProductChangeLogItem> GetAllProductChangelogItems();
+
+    int CountProductChangelogItems();
 }

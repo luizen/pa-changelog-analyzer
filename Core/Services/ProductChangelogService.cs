@@ -11,17 +11,28 @@ public class ProductChangelogService : IProductChangelogService
 
     public ProductChangelogService(ILogger<ProductChangelogService> logger, IProductChangelogRepository repository)
     {
+        logger.LogDebug($"{nameof(ProductChangelogService)} ctor");
         this.logger = logger;
         this.repository = repository;
     }
 
-    public IEnumerable<ProductChangeLogItem> GetAllChangelogItems()
+    public int CountProductChangelogItems()
     {
-        return repository.GetAllChangelogItems();
+        logger.LogDebug(nameof(CountProductChangelogItems));
+        return repository.Count();
     }
 
-    public int InitializeDb()
+    public IEnumerable<ProductChangeLogItem> GetAllProductChangelogItems()
     {
-        return repository.InitializeDb();
+        logger.LogDebug(nameof(GetAllProductChangelogItems));
+        return repository.GetAll();
+    }
+
+    public int InitializeDb(IEnumerable<ProductChangeLogItem> items)
+    {
+        logger.LogDebug(nameof(InitializeDb));
+
+        repository.DeleteAll();
+        return repository.Insert(items);
     }
 }

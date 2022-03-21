@@ -14,14 +14,16 @@ public class WebScraper : IWebScraper
 
     public WebScraper(ILogger<WebScraper> logger, IOptions<WebScraperOptions> options)
     {
+        logger.LogDebug($"{nameof(WebScraper)} ctor");
+        
         this.logger = logger;
         this.options = options;
     }
 
-    public async Task<IEnumerable<ProductChangeLogItem>> GetAllProductChangelogItems()
+    public async Task<IEnumerable<ProductChangeLogItem>> GetAllProductChangelogItemsFromWeb()
     {
-        logger.LogDebug("GetAllProductChangelogItems");
-        logger.LogDebug("Options = {Options}", options);
+        logger.LogDebug(nameof(GetAllProductChangelogItemsFromWeb));
+        logger.LogDebug("Options = {@Options}", options);
 
         var config = Configuration.Default.WithDefaultLoader();
         var context = BrowsingContext.New(config);
@@ -36,7 +38,7 @@ public class WebScraper : IWebScraper
         if (pluginNameItemsCount != changeLogItemsCount)
         {
             var errorMsg = "The number of plugin name items is different than the number of change log items.";
-            logger.LogDebug(errorMsg + " PluginNameItemsCount = {PluginNameItemsCount}; ChangeLogItemsCount = {ChangeLogItemsCount}", pluginNameItemsCount, changeLogItemsCount);
+            logger.LogDebug(errorMsg + " PluginNameItemsCount = {@PluginNameItemsCount}; ChangeLogItemsCount = {@ChangeLogItemsCount}", pluginNameItemsCount, changeLogItemsCount);
             throw new InvalidOperationException(errorMsg);
         }
 
@@ -52,8 +54,8 @@ public class WebScraper : IWebScraper
             result.Add(item);
 
             logger.LogDebug("----------------------------------------------");
-            logger.LogDebug("Plugin name = {PluginName}", item.Name);
-            logger.LogDebug("Change log = {ChangeLog}", item.Changelog);
+            logger.LogDebug("Plugin name = {@PluginName}", item.Name);
+            logger.LogDebug("Change log = {@ChangeLog}", item.Changelog);
         }
 
         return result;

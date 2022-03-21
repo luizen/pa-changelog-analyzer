@@ -13,18 +13,61 @@ public class ProductChangelogRepository : IProductChangelogRepository
 
     public ProductChangelogRepository(ILogger<ProductChangelogRepository> logger, ILiteDbContext dbContext)
     {
+        logger.LogDebug($"{nameof(ProductChangelogRepository)} ctor");
+
         this.liteDb = dbContext.Database;
         this.logger = logger;
         this.dbContext = dbContext;
     }
-    
-    public IEnumerable<ProductChangeLogItem> GetAllChangelogItems()
+
+    public int Count()
     {
-        throw new NotImplementedException();
+        logger.LogDebug(nameof(Count));
+        return liteDb.GetCollection<ProductChangeLogItem>().Count();
     }
 
-    public int InitializeDb()
+    public void DeleteAll()
     {
-        throw new NotImplementedException();
+        logger.LogDebug(nameof(DeleteAll));
+
+        var deletedCount = liteDb.GetCollection<ProductChangeLogItem>().DeleteAll();
+        logger.LogDebug("Deleted {@DeletedCount} items", deletedCount);
+    }
+
+    public IEnumerable<ProductChangeLogItem> GetAll()
+    {
+        logger.LogDebug(nameof(GetAll));
+
+        return liteDb.GetCollection<ProductChangeLogItem>().FindAll();
+    }
+
+    public bool Insert(ProductChangeLogItem item)
+    {
+        logger.LogDebug(nameof(Insert));
+
+        var col = liteDb.GetCollection<ProductChangeLogItem>();
+        var res = col.Insert(item);
+
+        // Create an index over the Name property (if it doesn't exist)
+        col.EnsureIndex(x => x.Name);
+
+        logger.LogDebug("Insert result {@Result}", res);
+
+        return res;
+    }
+
+    public int Insert(IEnumerable<ProductChangeLogItem> items)
+    {
+        logger.LogDebug($"{nameof(Insert)} multiple");
+
+        var col = liteDb.GetCollection<ProductChangeLogItem>();
+        var res = col.InsertBulk(items);
+
+        // Create an index over the Name property (if it doesn't exist)
+        col.EnsureIndex(x => x.Name);
+
+        logger.LogDebug("Inserted {@InsertedItemsCount} items", res);
+
+        return res;
     }
 }

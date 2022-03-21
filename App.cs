@@ -22,7 +22,14 @@ internal class App
     {
         logger.LogDebug("Running application...");
 
+        var itemsFromWeb = await webScraper.GetAllProductChangelogItemsFromWeb();
 
+        service.InitializeDb(itemsFromWeb);
+
+        var itemsFromDb = service.GetAllProductChangelogItems();
+
+        //logger.LogDebug("###### Items from Web: {@ItemsFromWeb}", itemsFromWeb);
+        logger.LogDebug("###### Items from Db: {@ItemsFromDb}", itemsFromDb);
     }
 
 }
