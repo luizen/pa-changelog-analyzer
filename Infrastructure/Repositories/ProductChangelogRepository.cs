@@ -41,6 +41,13 @@ public class ProductChangelogRepository : IProductChangelogRepository
         return liteDb.GetCollection<ProductChangeLogItem>().FindAll();
     }
 
+    public Dictionary<string, string> GetAllAsDictionary()
+    {
+        logger.LogDebug(nameof(GetAllAsDictionary));
+
+        return liteDb.GetCollection<ProductChangeLogItem>().FindAll().ToDictionary(key => key.Name, value => value.Changelog);
+    }
+
     public bool Insert(ProductChangeLogItem item)
     {
         logger.LogDebug(nameof(Insert));

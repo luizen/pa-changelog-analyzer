@@ -28,6 +28,12 @@ public class ProductChangelogService : IProductChangelogService
         return repository.GetAll();
     }
 
+    public Dictionary<string, string> GetAllProductChangelogItemsAsDictionary()
+    {
+        logger.LogDebug(nameof(GetAllProductChangelogItemsAsDictionary));
+        return repository.GetAllAsDictionary();
+    }
+
     public int InitializeDb(IEnumerable<ProductChangeLogItem> items)
     {
         logger.LogDebug(nameof(InitializeDb));

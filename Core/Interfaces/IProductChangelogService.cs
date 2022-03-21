@@ -8,5 +8,7 @@ public interface IProductChangelogService
 
     IEnumerable<ProductChangeLogItem> GetAllProductChangelogItems();
 
+    Dictionary<string, string> GetAllProductChangelogItemsAsDictionary();
+
     int CountProductChangelogItems();
 }

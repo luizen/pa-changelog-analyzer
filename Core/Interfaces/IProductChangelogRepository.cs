@@ -12,5 +12,7 @@ public interface IProductChangelogRepository
 
     int Count();
 
+    Dictionary<string, string> GetAllAsDictionary();
+
     IEnumerable<ProductChangeLogItem> GetAll();
 }
