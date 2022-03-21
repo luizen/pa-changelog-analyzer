@@ -1,5 +1,5 @@
 using Microsoft.Extensions.Logging;
-using PaChangelogAnalyzer.Core.Entities;
+using PaChangelogAnalyzer.Core.ValueObjects;
 using PaChangelogAnalyzer.Core.Interfaces;
 
 namespace PaChangelogAnalyzer.Core.Services;
@@ -26,12 +26,6 @@ public class ProductChangelogService : IProductChangelogService
     {
         logger.LogDebug(nameof(GetAllProductChangelogItems));
         return repository.GetAll();
-    }
-
-    public Dictionary<string, string> GetAllProductChangelogItemsAsDictionary()
-    {
-        logger.LogDebug(nameof(GetAllProductChangelogItemsAsDictionary));
-        return repository.GetAllAsDictionary();
     }
 
     public int InitializeDb(IEnumerable<ProductChangeLogItem> items)

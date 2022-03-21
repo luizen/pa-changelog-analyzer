@@ -1,4 +1,4 @@
-using PaChangelogAnalyzer.Core.Entities;
+using PaChangelogAnalyzer.Core.ValueObjects;
 
 namespace PaChangelogAnalyzer.Core.Interfaces;
 

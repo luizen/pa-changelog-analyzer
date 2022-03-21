@@ -1,4 +1,4 @@
-using PaChangelogAnalyzer.Core.Entities;
+using PaChangelogAnalyzer.Core.ValueObjects;
 
 namespace PaChangelogAnalyzer.Core.Interfaces;
 
@@ -11,8 +11,6 @@ public interface IProductChangelogRepository
     void DeleteAll();
 
     int Count();
-
-    Dictionary<string, string> GetAllAsDictionary();
 
     IEnumerable<ProductChangeLogItem> GetAll();
 }

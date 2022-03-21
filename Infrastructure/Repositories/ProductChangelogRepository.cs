@@ -1,6 +1,6 @@
 using LiteDB;
 using Microsoft.Extensions.Logging;
-using PaChangelogAnalyzer.Core.Entities;
+using PaChangelogAnalyzer.Core.ValueObjects;
 using PaChangelogAnalyzer.Core.Interfaces;
 
 namespace PaChangelogAnalyzer.Infrastructure.Repositories;
@@ -39,13 +39,6 @@ public class ProductChangelogRepository : IProductChangelogRepository
         logger.LogDebug(nameof(GetAll));
 
         return liteDb.GetCollection<ProductChangeLogItem>().FindAll();
-    }
-
-    public Dictionary<string, string> GetAllAsDictionary()
-    {
-        logger.LogDebug(nameof(GetAllAsDictionary));
-
-        return liteDb.GetCollection<ProductChangeLogItem>().FindAll().ToDictionary(key => key.Name, value => value.Changelog);
     }
 
     public bool Insert(ProductChangeLogItem item)

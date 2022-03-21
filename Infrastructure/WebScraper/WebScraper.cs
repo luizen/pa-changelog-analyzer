@@ -2,7 +2,7 @@ using AngleSharp;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using PaChangelogAnalyzer.Config;
-using PaChangelogAnalyzer.Core.Entities;
+using PaChangelogAnalyzer.Core.ValueObjects;
 using PaChangelogAnalyzer.Core.Interfaces;
 
 namespace PaChangelogAnalyzer.Infrastructure.WebScraper;
@@ -60,4 +60,5 @@ public class WebScraper : IWebScraper
 
         return result;
     }
+
 }
