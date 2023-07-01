@@ -2,18 +2,41 @@
     "version": "0.2.0",
     "configurations": [
         {
-            // Use IntelliSense to find out which attributes exist for C# debugging
-            // Use hover for the description of the existing attributes
-            // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
-            "name": ".NET Core Launch (console)",
+            "name": "InitDb",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/bin/Debug/net6.0/pa-changelog-analyzer.dll",
-            "args": [],
+            "program": "${workspaceFolder}/pa-changelog-analyzer.ui.cli/bin/Debug/net7.0/pa-changelog-analyzer.ui.cli.dll",
+            "args": [
+                "initdb"
+            ],
             "cwd": "${workspaceFolder}",
-            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Verify",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/pa-changelog-analyzer.ui.cli/bin/Debug/net7.0/pa-changelog-analyzer.ui.cli.dll",
+            "args": [
+                "verify"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Get dates",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/pa-changelog-analyzer.ui.cli/bin/Debug/net7.0/pa-changelog-analyzer.ui.cli.dll",
+            "args": [
+                "get-dates"
+            ],
+            "cwd": "${workspaceFolder}",
             "console": "internalConsole",
             "stopAtEntry": false
         },

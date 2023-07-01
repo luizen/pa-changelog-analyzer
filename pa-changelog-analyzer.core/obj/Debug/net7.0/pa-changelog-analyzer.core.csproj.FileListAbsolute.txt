@@ -1,0 +1,12 @@
+/Users/zenluiz/Documents/Desenvolvimento/repos/pa-changelog-analyzer/pa-changelog-analyzer.core/bin/Debug/net7.0/pa-changelog-analyzer.core.deps.json
+/Users/zenluiz/Documents/Desenvolvimento/repos/pa-changelog-analyzer/pa-changelog-analyzer.core/bin/Debug/net7.0/pa-changelog-analyzer.core.dll
+/Users/zenluiz/Documents/Desenvolvimento/repos/pa-changelog-analyzer/pa-changelog-analyzer.core/bin/Debug/net7.0/pa-changelog-analyzer.core.pdb
+/Users/zenluiz/Documents/Desenvolvimento/repos/pa-changelog-analyzer/pa-changelog-analyzer.core/obj/Debug/net7.0/pa-changelog-analyzer.core.csproj.AssemblyReference.cache
+/Users/zenluiz/Documents/Desenvolvimento/repos/pa-changelog-analyzer/pa-changelog-analyzer.core/obj/Debug/net7.0/pa-changelog-analyzer.core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/zenluiz/Documents/Desenvolvimento/repos/pa-changelog-analyzer/pa-changelog-analyzer.core/obj/Debug/net7.0/pa-changelog-analyzer.core.AssemblyInfoInputs.cache
+/Users/zenluiz/Documents/Desenvolvimento/repos/pa-changelog-analyzer/pa-changelog-analyzer.core/obj/Debug/net7.0/pa-changelog-analyzer.core.AssemblyInfo.cs
+/Users/zenluiz/Documents/Desenvolvimento/repos/pa-changelog-analyzer/pa-changelog-analyzer.core/obj/Debug/net7.0/pa-changelog-analyzer.core.csproj.CoreCompileInputs.cache
+/Users/zenluiz/Documents/Desenvolvimento/repos/pa-changelog-analyzer/pa-changelog-analyzer.core/obj/Debug/net7.0/pa-changelog-analyzer.core.dll
+/Users/zenluiz/Documents/Desenvolvimento/repos/pa-changelog-analyzer/pa-changelog-analyzer.core/obj/Debug/net7.0/refint/pa-changelog-analyzer.core.dll
+/Users/zenluiz/Documents/Desenvolvimento/repos/pa-changelog-analyzer/pa-changelog-analyzer.core/obj/Debug/net7.0/pa-changelog-analyzer.core.pdb
+/Users/zenluiz/Documents/Desenvolvimento/repos/pa-changelog-analyzer/pa-changelog-analyzer.core/obj/Debug/net7.0/ref/pa-changelog-analyzer.core.dll
