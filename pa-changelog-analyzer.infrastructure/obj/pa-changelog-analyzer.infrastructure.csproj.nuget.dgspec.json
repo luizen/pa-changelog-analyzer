@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.304/RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -103,11 +103,11 @@
           "dependencies": {
             "AngleSharp": {
               "target": "Package",
-              "version": "[1.0.1, )"
+              "version": "[1.0.4, )"
             },
             "LiteDB": {
               "target": "Package",
-              "version": "[5.0.15, )"
+              "version": "[5.0.16, )"
             },
             "Microsoft.Extensions.Logging": {
               "target": "Package",
@@ -130,7 +130,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.304/RuntimeIdentifierGraph.json"
         }
       }
     }
