@@ -35,7 +35,6 @@ public partial class Program
             {
                 var app = services.GetRequiredService<App>();
                 await app.Run(parserResult);
-
                 return 0;
             }
             catch (Exception ex)

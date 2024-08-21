@@ -5,6 +5,8 @@ using PaChangelogAnalyzer.Core.Interfaces;
 using AngleSharp;
 using PaChangelogAnalyzer.Infrastructure.Options;
 using AngleSharp.Html.Dom;
+using System.Collections.Concurrent;
+using System.Diagnostics;
 
 namespace PaChangelogAnalyzer.Infrastructure.WebScraper;
 
@@ -23,6 +25,8 @@ public class WebScraper : IWebScraper
 
     public async Task<IEnumerable<ProductChangeLogItem>> GetAllProductChangelogItemsFromWeb()
     {
+        List<ProductChangeLogItem> result = [];
+
         logger.LogDebug(nameof(GetAllProductChangelogItemsFromWeb));
         logger.LogDebug("Options = {@Options}", options);
 
@@ -30,30 +34,52 @@ public class WebScraper : IWebScraper
         var context = BrowsingContext.New(config);
 
         using var allProductsPageDocument = await context.OpenAsync(options.Value.ProductsUrl);
-
         var pluginLinks = allProductsPageDocument.QuerySelectorAll(options.Value.ProductLinkSelector);
 
-        List<ProductChangeLogItem> result = [];
+        var pluginPagesToScrape = new ConcurrentBag<PluginLink>();
 
         foreach (var pluginLink in pluginLinks)
         {
             var link = (IHtmlAnchorElement)pluginLink;
-
-            logger.LogInformation("Product: {@Product}    -- Link: {@Link}", link.Text, link.Href);
-
-            using var pluginPageDocument = await context.OpenAsync(link.Href);
-            var changeLogElement = pluginPageDocument.QuerySelector(options.Value.ChangelogSelector);
-            var changeLogContent = changeLogElement?.InnerHtml ?? null;
-
-            if (string.IsNullOrWhiteSpace(changeLogContent))
-            {
-                logger.LogWarning("Changelog element not found for product {@Product}", link.Text);
-            }
-
-            result.Add(new ProductChangeLogItem(link.Text, changeLogContent));
-
-            await Task.Delay(100);
+            pluginPagesToScrape.Add(new PluginLink() { Text = link.Text, Href = link.Href });
         }
+
+        logger.LogDebug("Before Parallel.ForEach");
+        var tasks = new List<Task>();
+
+        var stopwatch = new Stopwatch();
+        stopwatch.Start();
+
+        foreach (var currentPluginLink in pluginPagesToScrape)
+        {
+            tasks.Add(Task.Run(async () =>
+            {
+                // var context = BrowsingContext.New(config);
+
+                // Load the page contents
+                using var pluginPageDocument = await context.OpenAsync(currentPluginLink.Href);
+
+                // Try to find the changelog element
+                var changeLogElement = pluginPageDocument.QuerySelector(options.Value.ChangelogSelector);
+                var changeLogContent = changeLogElement?.InnerHtml ?? null;
+
+                if (string.IsNullOrWhiteSpace(changeLogContent))
+                {
+                    logger.LogWarning("Changelog element not found for product {@Product}", currentPluginLink.Text);
+                }
+                else
+                {
+                    logger.LogInformation("Changelog found for the Product: {@Product}", currentPluginLink.Text);
+                }
+
+                result.Add(new ProductChangeLogItem(currentPluginLink.Text, changeLogContent));
+            }));
+        }
+
+        await Task.WhenAll(tasks);
+
+        stopwatch.Stop();
+        logger.LogDebug("Elapsed time: {Elapsed}", stopwatch.Elapsed);
 
         return result;
     }

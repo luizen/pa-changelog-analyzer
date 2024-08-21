@@ -27,53 +27,56 @@ internal class App
         logger.LogInformation("Loading changelog from PA website...");
         var itemsFromWeb = await webScraper.GetAllProductChangelogItemsFromWeb();
 
-        bool dbWasJustInitialized = false;
-        parserResult.WithParsed<InitDbOptions>(_ => {
-            logger.LogInformation("Initializing database...");
-            service.InitializeDb(itemsFromWeb);
-            dbWasJustInitialized = true;
-        });
+        return;
 
-        if (dbWasJustInitialized)
-            return;
 
-        logger.LogInformation("Veryfing if newest PA changelog is different from the previously database...");
+        // bool dbWasJustInitialized = false;
+        // parserResult.WithParsed<InitDbOptions>(_ => {
+        //     logger.LogInformation("Initializing database...");
+        //     service.InitializeDb(itemsFromWeb);
+        //     dbWasJustInitialized = true;
+        // });
 
-        var itemsFromDb = service.GetAllProductChangelogItems();
-        var itemsFromDbDic = itemsFromDb.ToDictionary();
-        var itemsFromWebDic = itemsFromWeb.ToDictionary();
-        var differentItems = new List<ComparisonInfo>();
+        // if (dbWasJustInitialized)
+        //     return;
 
-        logger.LogDebug("###### Items from Web: {@ItemsFromWeb}", itemsFromWeb);
-        logger.LogDebug("###### Items from Db: {@ItemsFromDb}", itemsFromDb);
+        // logger.LogInformation("Veryfing if newest PA changelog is different from the previously database...");
 
-        foreach (var itemFromWeb in itemsFromWebDic)
-        {
-            var changeLogFromWeb = itemFromWeb.Value;
-            var changeLogFromDb = itemsFromDbDic.ContainsKey(itemFromWeb.Key) ? itemsFromDbDic[itemFromWeb.Key] : string.Empty;
+        // var itemsFromDb = service.GetAllProductChangelogItems();
+        // var itemsFromDbDic = itemsFromDb.ToDictionary();
+        // var itemsFromWebDic = itemsFromWeb.ToDictionary();
+        // var differentItems = new List<ComparisonInfo>();
 
-            if (string.Compare(changeLogFromWeb, changeLogFromDb, StringComparison.InvariantCultureIgnoreCase) != 0)
-            {
-                var compInfo = new ComparisonInfo
-                (
-                     ProductChangeLogItem.FromKeyValue(itemFromWeb.Key, changeLogFromWeb),
-                     ProductChangeLogItem.FromKeyValue(itemFromWeb.Key, changeLogFromDb)
-                );
+        // logger.LogDebug("###### Items from Web: {@ItemsFromWeb}", itemsFromWeb);
+        // logger.LogDebug("###### Items from Db: {@ItemsFromDb}", itemsFromDb);
 
-                differentItems.Add(compInfo);
-            }
-        }
+        // foreach (var itemFromWeb in itemsFromWebDic)
+        // {
+        //     var changeLogFromWeb = itemFromWeb.Value;
+        //     var changeLogFromDb = itemsFromDbDic.ContainsKey(itemFromWeb.Key) ? itemsFromDbDic[itemFromWeb.Key] : string.Empty;
 
-        if (!differentItems.Any())
-        {
-            logger.LogInformation("You are up to date. No new changes found in the PA website");
-            return;
-        }
+        //     if (string.Compare(changeLogFromWeb, changeLogFromDb, StringComparison.InvariantCultureIgnoreCase) != 0)
+        //     {
+        //         var compInfo = new ComparisonInfo
+        //         (
+        //              ProductChangeLogItem.FromKeyValue(itemFromWeb.Key, changeLogFromWeb),
+        //              ProductChangeLogItem.FromKeyValue(itemFromWeb.Key, changeLogFromDb)
+        //         );
 
-        logger.LogInformation("###### Updates available! There are {@DifferentItemsCount} changes you are not aware of.", differentItems.Count);
-        logger.LogInformation("###### Changes:");
+        //         differentItems.Add(compInfo);
+        //     }
+        // }
 
-        foreach (var item in differentItems)
-            logger.LogInformation("Plugin name: {@Plugin}. Comparison results: {@ComparisonResults}", item.FromWeb.Name, item);        
+        // if (!differentItems.Any())
+        // {
+        //     logger.LogInformation("You are up to date. No new changes found in the PA website");
+        //     return;
+        // }
+
+        // logger.LogInformation("###### Updates available! There are {@DifferentItemsCount} changes you are not aware of.", differentItems.Count);
+        // logger.LogInformation("###### Changes:");
+
+        // foreach (var item in differentItems)
+        //     logger.LogInformation("Plugin name: {@Plugin}. Comparison results: {@ComparisonResults}", item.FromWeb.Name, item);        
     }
 }
