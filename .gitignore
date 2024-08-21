@@ -1,5 +1,13 @@
-/.DS_Store
-/bin
-/obj
 pa-changelog-analyzer.db
-pa-changelog-analyzer.ui.cli/.DS_Store
+/.DS_Store
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
