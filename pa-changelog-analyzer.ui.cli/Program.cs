@@ -14,7 +14,7 @@ public partial class Program
         {
             config.CaseInsensitiveEnumValues = true;
             config.HelpWriter = Console.Error;
-        }).ParseArguments<InitDbOptions, VerifyOptions>(args);
+        }).ParseArguments<InitDbOptions, VerifyOptions, GetDatesOptions>(args);
 
         if (parserResult.Tag == ParserResultType.NotParsed)
         {

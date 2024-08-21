@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "2uznRonw9/5Zx+xEtKtbR+djfdS0AIRtQbguKTn9sPzLiKR8TttYJHVXIc/GNJQHwM0hgVyeDY3cdXULJD1Vvw==",
+  "dgSpecHash": "HzGRTl35B3k=",
   "success": true,
   "projectFilePath": "/Users/zenluiz/Documents/Desenvolvimento/repos/pa-changelog-analyzer/pa-changelog-analyzer.infrastructure/pa-changelog-analyzer.infrastructure.csproj",
   "expectedPackageFiles": [
@@ -12,7 +12,9 @@
     "/Users/zenluiz/.nuget/packages/microsoft.extensions.logging.abstractions/7.0.0/microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
     "/Users/zenluiz/.nuget/packages/microsoft.extensions.options/7.0.0/microsoft.extensions.options.7.0.0.nupkg.sha512",
     "/Users/zenluiz/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512",
-    "/Users/zenluiz/.nuget/packages/system.text.encoding.codepages/7.0.0/system.text.encoding.codepages.7.0.0.nupkg.sha512"
+    "/Users/zenluiz/.nuget/packages/system.text.encoding.codepages/7.0.0/system.text.encoding.codepages.7.0.0.nupkg.sha512",
+    "/Users/zenluiz/.nuget/packages/microsoft.netcore.app.ref/7.0.20/microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
+    "/Users/zenluiz/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.20/microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512"
   ],
   "logs": []
 }
