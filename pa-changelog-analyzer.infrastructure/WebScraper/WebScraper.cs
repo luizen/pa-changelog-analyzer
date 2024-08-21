@@ -4,6 +4,7 @@ using PaChangelogAnalyzer.Core.ValueObjects;
 using PaChangelogAnalyzer.Core.Interfaces;
 using AngleSharp;
 using PaChangelogAnalyzer.Infrastructure.Options;
+using AngleSharp.Html.Dom;
 
 namespace PaChangelogAnalyzer.Infrastructure.WebScraper;
 
@@ -28,39 +29,32 @@ public class WebScraper : IWebScraper
         var config = Configuration.Default.WithDefaultLoader();
         var context = BrowsingContext.New(config);
 
-        using (var document = await context.OpenAsync(options.Value.Url))
+        using var allProductsPageDocument = await context.OpenAsync(options.Value.ProductsUrl);
+
+        var pluginLinks = allProductsPageDocument.QuerySelectorAll(options.Value.ProductLinkSelector);
+
+        List<ProductChangeLogItem> result = [];
+
+        foreach (var pluginLink in pluginLinks)
         {
-            var pluginNameElements = document.QuerySelectorAll(options.Value.PluginNamesSelector);
-            var changeLogElements = document.QuerySelectorAll(options.Value.ChangeLogsSelector);
+            var link = (IHtmlAnchorElement)pluginLink;
 
-            var pluginNameItemsCount = pluginNameElements.Length;
-            var changeLogItemsCount = changeLogElements.Length;
+            logger.LogInformation("Product: {@Product}    -- Link: {@Link}", link.Text, link.Href);
 
-            if (pluginNameItemsCount != changeLogItemsCount)
+            using var pluginPageDocument = await context.OpenAsync(link.Href);
+            var changeLogElement = pluginPageDocument.QuerySelector(options.Value.ChangelogSelector);
+            var changeLogContent = changeLogElement?.InnerHtml ?? null;
+
+            if (string.IsNullOrWhiteSpace(changeLogContent))
             {
-                var errorMsg = "The number of plugin name items is different than the number of change log items.";
-                var errorMsgTemplate = "{@ErrorMessage}. PluginNameItemsCount = {@PluginNameItemsCount}; ChangeLogItemsCount = {@ChangeLogItemsCount}";
-                logger.LogError(errorMsgTemplate, errorMsg, pluginNameItemsCount, changeLogItemsCount);
-                throw new InvalidOperationException(errorMsg);
+                logger.LogWarning("Changelog element not found for product {@Product}", link.Text);
             }
 
-            var result = new List<ProductChangeLogItem>();
-            for (int i = 0; i < pluginNameItemsCount; i++)
-            {
-                var item = new ProductChangeLogItem()
-                {
-                    Name = pluginNameElements[i].TextContent,
-                    Changelog = changeLogElements[i].TextContent //.InnerHtml
-                };
+            result.Add(new ProductChangeLogItem(link.Text, changeLogContent));
 
-                result.Add(item);
-
-                logger.LogDebug("----------------------------------------------");
-                logger.LogDebug("Plugin name = {@PluginName}", item.Name);
-                logger.LogDebug("Change log = {@ChangeLog}", item.Changelog);
-            }
-
-            return result;
+            await Task.Delay(100);
         }
+
+        return result;
     }
 }

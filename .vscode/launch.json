@@ -6,7 +6,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/pa-changelog-analyzer.ui.cli/bin/Debug/net7.0/pa-changelog-analyzer.ui.cli.dll",
+            "program": "${workspaceFolder}/pa-changelog-analyzer.ui.cli/bin/Debug/net8.0/pa-changelog-analyzer.ui.cli.dll",
             "args": [
                 "initdb"
             ],
@@ -19,7 +19,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/pa-changelog-analyzer.ui.cli/bin/Debug/net7.0/pa-changelog-analyzer.ui.cli.dll",
+            "program": "${workspaceFolder}/pa-changelog-analyzer.ui.cli/bin/Debug/net8.0/pa-changelog-analyzer.ui.cli.dll",
             "args": [
                 "verify"
             ],
@@ -32,7 +32,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/pa-changelog-analyzer.ui.cli/bin/Debug/net7.0/pa-changelog-analyzer.ui.cli.dll",
+            "program": "${workspaceFolder}/pa-changelog-analyzer.ui.cli/bin/Debug/net8.0/pa-changelog-analyzer.ui.cli.dll",
             "args": [
                 "get-dates"
             ],
