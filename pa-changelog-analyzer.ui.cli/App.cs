@@ -1,3 +1,7 @@
+using System.Net.Http.Json;
+using System.Text;
+using System.Text.Json;
+using ConsoleTables;
 using PaChangelogAnalyzer.Core.Extensions;
 using PaChangelogAnalyzer.Core.Interfaces;
 using PaChangelogAnalyzer.Core.ValueObjects;
@@ -26,6 +30,24 @@ internal class App
 
         logger.LogInformation("Loading changelog from PA website...");
         var itemsFromWeb = await webScraper.GetAllProductChangelogItemsFromWeb();
+
+        var itemsWith2024 = itemsFromWeb.Where(item => item.HasChangelog && item.Changelog!.Contains("2024")).ToList();
+
+        if (!itemsWith2024.Any())
+        {
+            logger.LogInformation("No changelog items containing '2024' found.");
+            return;
+        }
+
+        var json = JsonSerializer.Serialize(itemsWith2024, new JsonSerializerOptions()
+        {
+            WriteIndented = true,
+            Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping
+        });
+
+        logger.LogInformation("Writing output to file...");
+        var filePath = "output-file-plugins-pa.json";
+        await File.WriteAllTextAsync(filePath, json);
 
         return;
 
