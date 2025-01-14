@@ -1,11 +1,11 @@
-using System.Net.Http.Json;
-using System.Text;
+// using System.Net.Http.Json;
+// using System.Text;
 using System.Text.Json;
-using ConsoleTables;
-using PaChangelogAnalyzer.Core.Extensions;
+// using ConsoleTables;
+// using PaChangelogAnalyzer.Core.Extensions;
 using PaChangelogAnalyzer.Core.Interfaces;
 using PaChangelogAnalyzer.Core.ValueObjects;
-using PaChangelogAnalyzer.Ui.Cli.Options;
+// using PaChangelogAnalyzer.Ui.Cli.Options;
 
 namespace PaChangelogAnalyzer.Ui.Cli;
 
@@ -31,23 +31,8 @@ internal class App
         logger.LogInformation("Loading changelog from PA website...");
         var itemsFromWeb = await webScraper.GetAllProductChangelogItemsFromWeb();
 
-        var itemsWith2024 = itemsFromWeb.Where(item => item.HasChangelog && item.Changelog!.Contains("2024")).ToList();
-
-        if (!itemsWith2024.Any())
-        {
-            logger.LogInformation("No changelog items containing '2024' found.");
-            return;
-        }
-
-        var json = JsonSerializer.Serialize(itemsWith2024, new JsonSerializerOptions()
-        {
-            WriteIndented = true,
-            Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping
-        });
-
-        logger.LogInformation("Writing output to file...");
-        var filePath = "output-file-plugins-pa.json";
-        await File.WriteAllTextAsync(filePath, json);
+        await WriteToJson(itemsFromWeb, "2024");
+        await WriteToJson(itemsFromWeb, "2025");
 
         return;
 
@@ -100,5 +85,26 @@ internal class App
 
         // foreach (var item in differentItems)
         //     logger.LogInformation("Plugin name: {@Plugin}. Comparison results: {@ComparisonResults}", item.FromWeb.Name, item);        
+    }
+
+    private async Task WriteToJson(IEnumerable<ProductChangeLogItem> itemsFromWeb, string year)
+    {
+        var items = itemsFromWeb.Where(item => item.HasChangelog && item.Changelog!.Contains(year)).ToList();
+
+        if (items.Count == 0)
+        {
+            logger.LogInformation($"No changelog items containing '{year}' found.");
+            return;
+        }
+
+        var json = JsonSerializer.Serialize(items, new JsonSerializerOptions()
+        {
+            WriteIndented = true,
+            Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping
+        });
+
+        logger.LogInformation($"Writing output to file {year}...");
+        var filePath = $"output-file-plugins-pa-{year}.json";
+        await File.WriteAllTextAsync(filePath, json);
     }
 }
