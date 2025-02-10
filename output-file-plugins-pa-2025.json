@@ -1,7 +1,42 @@
 [
   {
+    "Name": "Machine Head",
+    "Changelog": "SPL Machine Head - Changelog<br><br>Version 1.0 (Jan 29, 2025)<br>- Initial release<br>",
+    "HasChangelog": true
+  },
+  {
+    "Name": "bx_refinement V3",
+    "Changelog": "bx_refinement V3 - Changelog<br><br>Version 3.0.0 (January 22, 2025)<br>- Initial release",
+    "HasChangelog": true
+  },
+  {
     "Name": "OLDTIMER",
     "Changelog": "NEOLD OLDTIMER - Changelog<br><br>Version 1.0.1 (Jan 10, 2025)<br>- Fix: Properly set output silence flags in VST3 to overcome gating issues in e.g. Bitwig or Ableton Live<br>- Add Mix lock feature<br>- Update manual<br><br>Version 1.0.0 (Dec 10, 2024)<br>- Initial Release",
+    "HasChangelog": true
+  },
+  {
+    "Name": "Machine Head",
+    "Changelog": "SPL Machine Head - Changelog<br><br>Version 1.0 (Jan 29, 2025)<br>- Initial release<br>",
+    "HasChangelog": true
+  },
+  {
+    "Name": "bx_refinement V3",
+    "Changelog": "bx_refinement V3 - Changelog<br><br>Version 3.0.0 (January 22, 2025)<br>- Initial release",
+    "HasChangelog": true
+  },
+  {
+    "Name": "Trinity Shaper",
+    "Changelog": "Three-Body Technology Trinity Shaper - Changelog<br><br>Version 1.1.0 (Jan 17, 2025)<br>New Features:<br>- Added gain adjustment knobs for each band in multi-band mode.<br>- Added a button to toggle the processing order between Makeup and Limiter.<br>Bug Fixes:<br>- Fixed a bug where the monitoring status displayed incorrectly after reopening the window. <br>- Fixed a bug where dialog boxes displayed incorrectly in some cases. <br>- Fixed a bug where preset names and modification statuses were displayed incorrectly. <br>Improvements:<br>- A setting has been added for the side chain EQ that, when enabled, will display a parameter value monitor for the selected band, supporting drag-and-drop editing and double-click input editing.<br>- Added a status indicator to show when sidechain mode and sidechain EQ are active (displayed on the sidechain button).<br>- Improved visibility of frequency settings for bands in multi-band mode.<br>- The ‘alt’ key is now displayed as ‘option’ in the settings on Mac version.<br>- Added the ability to set background images in the theme settings.<br><br>Version 1.0.0 (Sep 12, 2024)<br> - Initial release<br>",
+    "HasChangelog": true
+  },
+  {
+    "Name": "Needlepoint",
+    "Changelog": "Unfiltered Audio Needlepoint - Changelog<br><br>Version 1.0.7 (Jan 31, 2025)<br>- Fix for infinite loop causing crash on Apple Silicon<br><br>Version 1.0.6 (Mar 16, 2023)<br>- Add AAX ARM support for Apple Silicon.<br><br>Version 1.0.5 (Mar 01, 2023)<br>- Fix latency reporting causing Cubase issues when plugin is bypassed.<br><br>Version 1.0.4 (Feb 24, 2023)<br>- Bundle previous changes for release on Mac and Windows.<br>- Credits page was always printing \"1.0.0\". Fixed.<br><br>Version 1.0.3 (Dec 7, 2022)<br>- Remove OpenGL on iOS to fix rendering on many devices.<br><br>Version 1.0.2 (Nov 29, 2022)<br>- Fix latency reporting for certain DAWs, especially on iOS.<br>- Optimize visualizers. Reduce unneeded repaint calls and limit maximum frame rate to prevent runaway CPU usage.<br>- Fix for mono rendering on visualizer.<br>- Add ability to disable the visualizer to conserve CPU.<br>- Fix rare situation where colors wouldn't update properly.<br><br>Version 1.0.1 (Oct 7, 2022)<br>- Fix for situations where multiple instances of Needlepoint could cause crashing, especially on sample rate change.<br><br>Version 1.0.0 (Aug 25, 2022)<br>- Initial Release",
+    "HasChangelog": true
+  },
+  {
+    "Name": "Cenozoix Compressor",
+    "Changelog": "Three Body Technology Cenozoix Compressor - Changelog<br><br>Version 1.1.1 (Jan 17, 2025)<br>Bug Fixes:<br>- Fixed a bug where dialog boxes displayed incorrectly in some cases. <br>- Fixed a bug where preset names and modification statuses were displayed incorrectly. <br>Improvements:<br>- A setting has been added for the side chain EQ that, when enabled, will display a parameter value monitor for the selected band, supporting drag-and-drop editing and double-click input editing.<br>- Added a status indicator to show when sidechain mode and sidechain EQ are active (Displayed on the sidechain button).<br>- Added 3dB, 1dB and 0 dB options for the waveform display's maximum dB setting (in display panel).<br>- Added -6 dB and -3 dB options for the waveform display's minimum dB setting (in display panel).<br>- The ‘alt’ key is now displayed as ‘option’ in the settings on Mac version.<br>- Added the ability to set background images in the theme settings.<br><br>Version 1.1.0 (Apr 19, 2024)<br>- Implemented \"Drive\" modelling: Extra harmonic distortions for each of 24 vintage and modern compressor styles with adjustable drive levels. Enables you to mix and match a compressor style with a different drive style<br>- Implemented \"Post-Makeup Dry Mix\" that allows to mix dry and wet signals after makeup processing.<br>- Implemented compact mode with hidden waveform and threshold panels<br><br>Version 1.0.1 (Feb 21, 2024)<br>Bug Fixes<br>- Oversampling now works correctly. Fixed the issue that some internal DSP codes remain at the original sample rate instead of being initialized to a higher sample rate when oversampling is enabled, which may cause the missing low end.<br>- Fixed an issue with latency compensation which causes phase issues when mixing dry and wet signals.<br>- Undo in Logic now works correctly.<br>- Fixed the incorrect display of Hold parameter when reopening the GUI.<br>- Now knob fine tuning with Shift works correctly on macOS.<br>Optimizations<br>- New oversampling IR kernel that improves the sound quality while slightly increasing the latency.<br>- Now supports the gain reduction meter display in Studio One.<br><br>Version 1.0.0 (Feb 6, 2024)<br>- Initial Release",
     "HasChangelog": true
   }
 ]

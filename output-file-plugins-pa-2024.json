@@ -1,22 +1,12 @@
 [
   {
-    "Name": "bx_boom V3",
-    "Changelog": "bx_boom V3 - Changelog<br><br>Version 3.0.0 (Oct 10, 2024)<br>- Initial release",
+    "Name": "bx_aura",
+    "Changelog": "bx_aura - Changelog<br><br>Version 1.1.0 (Sep 23, 2024)<br>- Added missing parameter units to generic UI<br>- Fixed a bug where Pro Tools would block the plugin due to an unactivated license<br>- Fixed a bug where the positions of EQ and Drive didn't update when plugin processing was suspended<br>- General: Added usage data tracking<br><br>Version 1.0.0 (June 13, 2024)<br>- Initial release",
     "HasChangelog": true
   },
   {
-    "Name": "C502V",
-    "Changelog": "Bettermaker C502V DSP change log<br><br>Version 1.0.0 (October 29, 2024)<br> - Initial release<br>",
-    "HasChangelog": true
-  },
-  {
-    "Name": "HG-Q",
-    "Changelog": "Black Box Analog Design HG-Q - Changelog<br><br>Version 1.0.1 (Nov 28, 2024)<br>- Fixed graphical perfomance issues<br>- Fixed stuck boost gain callout after switching to expanded mode<br>- Fixed that the band active buttons do not turn off when the plugin is bypassed.<br>- Fixed static highlighted pixels in all eq curves<br>- Fixed crash when switching channelcount in mono gui (reaper)<br><br>Version 1.0 (Nov 4, 2024)<br>- Initial Release<br>",
-    "HasChangelog": true
-  },
-  {
-    "Name": "SCULPT",
-    "Changelog": "ADPTR AUDIO Sculpt - Changelog<br><br>Version 1.3.0 (Feb 8, 2024)<br>- NEW High-Pass / Low-Shelf toggle added for side-chain EQ<br>- NEW External side-chain audition toggle button<br>- NEW Auto-gain begins analysis automatically when switched on<br>- NEW Numbers can be dragged up and down in EQ pop-out boxes<br>- CHANGE Auto-gain is now disabled when external side chain is activated<br>- CHANGE Mono side-chain enabled to allow external side-chaining in Pro Tools<br>- FIX: Fixed bug where an incorrect latency was occasionally reported wrongly in WaveLab<br>- Various stability / performance improvements<br><br>Version 1.2.0 (Mar 16, 2023)<br>- NEW Precision Mode with higher meter resolution<br>- NEW Master output meters have adjustable range<br>- NEW Mono (1 in 1 out) channel configuration support<br>- NEW Tone Sculpt smoothing param<br>- NEW More Plugin Themes<br>- NEW AAX Native Apple Silicon support<br>- Module controls are now hidden when mouse cursor is outside the plugin Window<br>- Fixed bug in FL Studio latency error when offline rendering<br><br>Version 1.1.2 (Aug 24, 2022)<br>- Native M1 builds for VST2, VST3 and AU mac formats<br>- New performance menu added, allowing enhanced customisation of latency vs performance (see hints / manual)<br>- Internal sound quality improvements on lower latency modes<br>- Many internal optimisations for lower CPU usage<br>- Option to disable OpenGL added to settings menu in Windows (not recommended, only for when you have issues with OpenGL)<br>- Hide module controls when mouse is over Tone Area for better visibility of History Graph<br>- Disable controls when greyed out to prevent confusion<br>- Extra-small (60%) UI size added<br>- Metering, Tonal Graph and History Graph parameters are no longer saved with Master Presets<br>- Highlight parent folder of currently selected preset when navigating preset menus<br>- Hard-enable Transient Module automatically when interacted with<br>- Fixed bug where non-realtime rendering in Wavelab 11 was creating incorrect/noisy results<br>- Fixed bug where transport bar visually flickered in some hosts<br>- Fixed bug where latency was incorrect when host-bypass engaged in some DAWs<br>- Fixed bug where Changes to declared plugin latency were picked up for VST2 in Cubase (Mac/Win)<br>- Minor UI tweaks<br>- Oversample / Latency Mode / External Sidechain parameters no longer saved with Master presets<br>- Audio Demo folder added to master presets<br>- Fixed crash in Adobe Audition 2020 on Plugin Open<br><br>Version 1.0.5 (Feb 17, 2022)<br>- Initial release<br><br>",
+    "Name": "EQ4 MS",
+    "Changelog": "Maag EQ4 MS - Changelog<br><br>Version 1.0 (Sep 19, 2024)<br>- Initial release",
     "HasChangelog": true
   },
   {
@@ -25,18 +15,28 @@
     "HasChangelog": true
   },
   {
+    "Name": "C502V",
+    "Changelog": "Bettermaker C502V DSP change log<br><br>Version 1.0.0 (October 29, 2024)<br> - Initial release<br>",
+    "HasChangelog": true
+  },
+  {
+    "Name": "EQ4 MS",
+    "Changelog": "Maag EQ4 MS - Changelog<br><br>Version 1.0 (Sep 19, 2024)<br>- Initial release",
+    "HasChangelog": true
+  },
+  {
+    "Name": "V76U73",
+    "Changelog": "NEOLD V76U73 - Changelog<br><br>Version 1.3 (Mar 6, 2024)<br>- Fix: Black Boxes around the Plugin GUI in VST3 in Cubase on Windows<br>- Remove 32-Bit support on Windows<br>- Add double click -&gt; reset to default feature<br>- Add mouse sensitivity item to main menu<br>- Improvement: Swap EQ &lt;-&gt; Dynamics categories, so plugin shows up under Dynamics in AAX, VST and VST3<br><br>Version 1.2 (Mar 16, 2023)<br>- Added native Apple Silicon support in AAX<br><br>Version 1.1 (Jun 15, 2022)<br>- Added Apple Silicon support<br>- Fixed automation issues in offline bounces / renders<br>- Fixed inconsistencies between buttons and indicator lights on macOS<br>- Added clickable labels<br><br>Version 1.0.1 (Sep 7, 2020)<br>- Fixed audio drop outs after extended periods of time<br>- Added trim feature between V76 and U73b modules (\"Send\")<br>- Updated manual to v1.0.1<br><br>Version 1.0 (Aug 7, 2020)<br>- Release version<br>",
+    "HasChangelog": true
+  },
+  {
+    "Name": "bx_XL V3",
+    "Changelog": "Brainworx bx_XL V3 - Changelog<br><br>Version 3.0.1 (Jul 01, 2024)<br>- Fixed font drawing at 75% and 125% UI scaling<br>- Fixed gain reduction meters not showing up correctly in Pro Tools<br>- Fixed weird behaviour of parameter banks and reset control<br>- Fixed sidechain metering not resetting correctly with suspended processing<br>- Updated Manual<br><br>Version 3.0 (Jun 4, 2024)<br>- Initial release<br>",
+    "HasChangelog": true
+  },
+  {
     "Name": "HYPE",
     "Changelog": "ADPTR Hype - Changelog<br><br>Version 1.5.0 (Nov 26, 2024)<br>- New Harmonic Modes : Sine Clean, Fold Clean, Fold Over<br>- New Multi-Band Gate which is part of the compressor section<br>    Gate has 3 modes off / Classic / Parallel (closed == dry rather than silence)<br>    Lock Gate allows user to stop gate settings changing when flicking through presets.<br>- New Max Gain feature to cap the amount of gain the Compressor section can apply.<br>- Stereo / Width Module&nbsp;improved with better differentiation of wet signal leading to better stereo coherence. (Menu contains a fallback to legacy behaviour)<br>- New, higher quality Linear Phase crossover.<br>- Per band Gain Metering in compressor section (showing gain reduction and gain increase)<br>- THD Monitoring in harmonics section.<br>- More Automatable Parameters<br>- More consistent UI styling and mouse over behaviour.<br><br>Version 1.0.1 (Apr 19, 2024)<br>- Soft Bypass: Improved functionality for in and out levels, also smoother audio during engagement.<br>- UI Enhancements:<br>  - Added cross over type and Clip controls to the user interface.<br>  - Corrected display issue where the bypass overlay did not show correctly when the plugin was opened in bypass mode.<br>- Stereo Module: Resolved an issue where bypassing could diminish sides signal, impacting null tests.<br>- Frequency Analyser: Fixed occasional graphic tearing.<br>- Presets: Expanded preset library.<br>- Some minor UI errata<br><br>Version 1.0.0 (Feb 29, 2024)<br>- Initial release",
-    "HasChangelog": true
-  },
-  {
-    "Name": "Wavesurfer",
-    "Changelog": "Karanyi Sounds Wavesurfer - Changelog<br><br>Version 1.0.0 (Dec 17, 2024)<br> - Initial release<br>",
-    "HasChangelog": true
-  },
-  {
-    "Name": "splat",
-    "Changelog": "fiedler audio splat - Changelog<br><br>Version 1.0.0 (Sep 4, 2024)<br> - Initial release<br>",
     "HasChangelog": true
   },
   {
@@ -50,38 +50,8 @@
     "HasChangelog": true
   },
   {
-    "Name": "V76U73",
-    "Changelog": "NEOLD V76U73 - Changelog<br><br>Version 1.3 (Mar 6, 2024)<br>- Fix: Black Boxes around the Plugin GUI in VST3 in Cubase on Windows<br>- Remove 32-Bit support on Windows<br>- Add double click -&gt; reset to default feature<br>- Add mouse sensitivity item to main menu<br>- Improvement: Swap EQ &lt;-&gt; Dynamics categories, so plugin shows up under Dynamics in AAX, VST and VST3<br><br>Version 1.2 (Mar 16, 2023)<br>- Added native Apple Silicon support in AAX<br><br>Version 1.1 (Jun 15, 2022)<br>- Added Apple Silicon support<br>- Fixed automation issues in offline bounces / renders<br>- Fixed inconsistencies between buttons and indicator lights on macOS<br>- Added clickable labels<br><br>Version 1.0.1 (Sep 7, 2020)<br>- Fixed audio drop outs after extended periods of time<br>- Added trim feature between V76 and U73b modules (\"Send\")<br>- Updated manual to v1.0.1<br><br>Version 1.0 (Aug 7, 2020)<br>- Release version<br>",
-    "HasChangelog": true
-  },
-  {
-    "Name": "XTComp",
-    "Changelog": "Kiive XTComp - Changelog<br><br>Version 1.0.1 (Jun 7, 2024)<br>- Fixed Brit mode button linking <br>- Fixed mix knob not working properly <br>- Fixed oversampling not rendering<br>- Fixed parameter recall in PT<br><br>Version 1.0.0 (Feb 8, 2024)<br>- Initial release<br><br><br>",
-    "HasChangelog": true
-  },
-  {
-    "Name": "Battalion",
-    "Changelog": "Unfiltered Audio Battalion - Changelog<br><br>Version 1.0.7 (Nov 4, 2024)<br>- Hotfix. Voice Presets created in V1.0.4 and earlier were not loading correctly in V1.0.5 and V1.0.6<br><br>Version 1.0.6 (Sep 17, 2024)<br>- Hotfix. Battalion was not resizing correctly in formats other than VST3.<br><br>Version 1.0.5 (Sep 11, 2024)<br>- Add NKS support.<br>- Add Scrapyard synth engine, a blend of FM and Modal.<br>- Add MiniGlitch and MegaGlitch distortion effects.<br>- Add Contrast distortion effect.<br>- Add Square distortion effect.<br>- Add Dropout distortion effect.<br>- Add MIDI note controls to start or stop playback.<br>- Add MIDI note controls to toggle Mute and Solo status.<br>- Add MIDI note controls to control randomization and performance.<br>- Add MIDI note controls to change presets.<br>- Add MIDI note controls to manually choke drum channels.<br>- The play/stop status is now saved with DAW projects.<br>- The reverb control no longer jumps unpredictably when clicked and behaves more like the other knobs.<br>- Fixed a bug where sampler controls were not updating with correct engine tooltips.<br>- Fixed a hard crash in Pro Tools when clicking a drop-down on the sequencer page.<br>- Added a \"Show User Sample Folder\" shortcut to the sample selection menu.<br>- Fixed a bug where \"Free Run\" LFOs weren't resetting when the DAW's transport was restarted.<br>- \"Load Sample...\" now remembers the last folder opened during a session.<br>- Significant optimizations to GUI rendering.<br>- Performance: removed unnecessary repaints on envelope visualizers, sample visualizer, and play button (50% CPU gain)  <br>- Performance: fixed infinite loop bug in sample loader <br>- Performance: fixed bug causing some minimized states on interface to use +100% CPU<br><br>Version 1.0.4 (May 6, 2024)<br>- Fixed race condition crash when turning Performance Steps negative or other sequencer conditions leading to a undefined rotation<br>- Fixed lockup when randomizing presets rapidly<br>- Stop button works correctly again<br>- Performance controls don't affect label printing on sequencer page<br><br>Version 1.0.3 (Apr 16, 2024)<br>- Initial Release",
-    "HasChangelog": true
-  },
-  {
-    "Name": "MU-66",
-    "Changelog": "Lindell MU-66 - Changelog<br><br>Version 1.0.0 (Jun 18, 2024)<br>- Initial release<br><br><br>",
-    "HasChangelog": true
-  },
-  {
-    "Name": "Trinity Shaper",
-    "Changelog": "Three-Body Technology Trinity Shaper - Changelog<br><br>Version 1.0.0 (Sep 12, 2024)<br> - Initial release<br>",
-    "HasChangelog": true
-  },
-  {
-    "Name": "EQ4 MS",
-    "Changelog": "Maag EQ4 MS - Changelog<br><br>Version 1.0 (Sep 19, 2024)<br>- Initial release",
-    "HasChangelog": true
-  },
-  {
-    "Name": "Passive Equalizer",
-    "Changelog": "Bettermaker Passive Equalizer - Changelog<br><br>Version 1.0.0 (Aug 22, 2024)<br> - Initial release<br>",
+    "Name": "SCULPT",
+    "Changelog": "ADPTR AUDIO Sculpt - Changelog<br><br>Version 1.3.0 (Feb 8, 2024)<br>- NEW High-Pass / Low-Shelf toggle added for side-chain EQ<br>- NEW External side-chain audition toggle button<br>- NEW Auto-gain begins analysis automatically when switched on<br>- NEW Numbers can be dragged up and down in EQ pop-out boxes<br>- CHANGE Auto-gain is now disabled when external side chain is activated<br>- CHANGE Mono side-chain enabled to allow external side-chaining in Pro Tools<br>- FIX: Fixed bug where an incorrect latency was occasionally reported wrongly in WaveLab<br>- Various stability / performance improvements<br><br>Version 1.2.0 (Mar 16, 2023)<br>- NEW Precision Mode with higher meter resolution<br>- NEW Master output meters have adjustable range<br>- NEW Mono (1 in 1 out) channel configuration support<br>- NEW Tone Sculpt smoothing param<br>- NEW More Plugin Themes<br>- NEW AAX Native Apple Silicon support<br>- Module controls are now hidden when mouse cursor is outside the plugin Window<br>- Fixed bug in FL Studio latency error when offline rendering<br><br>Version 1.1.2 (Aug 24, 2022)<br>- Native M1 builds for VST2, VST3 and AU mac formats<br>- New performance menu added, allowing enhanced customisation of latency vs performance (see hints / manual)<br>- Internal sound quality improvements on lower latency modes<br>- Many internal optimisations for lower CPU usage<br>- Option to disable OpenGL added to settings menu in Windows (not recommended, only for when you have issues with OpenGL)<br>- Hide module controls when mouse is over Tone Area for better visibility of History Graph<br>- Disable controls when greyed out to prevent confusion<br>- Extra-small (60%) UI size added<br>- Metering, Tonal Graph and History Graph parameters are no longer saved with Master Presets<br>- Highlight parent folder of currently selected preset when navigating preset menus<br>- Hard-enable Transient Module automatically when interacted with<br>- Fixed bug where non-realtime rendering in Wavelab 11 was creating incorrect/noisy results<br>- Fixed bug where transport bar visually flickered in some hosts<br>- Fixed bug where latency was incorrect when host-bypass engaged in some DAWs<br>- Fixed bug where Changes to declared plugin latency were picked up for VST2 in Cubase (Mac/Win)<br>- Minor UI tweaks<br>- Oversample / Latency Mode / External Sidechain parameters no longer saved with Master presets<br>- Audio Demo folder added to master presets<br>- Fixed crash in Adobe Audition 2020 on Plugin Open<br><br>Version 1.0.5 (Feb 17, 2022)<br>- Initial release<br><br>",
     "HasChangelog": true
   },
   {
@@ -90,8 +60,13 @@
     "HasChangelog": true
   },
   {
-    "Name": "MBC",
-    "Changelog": "Lindell MBC - Changelog<br><br>Version 1.0.4 (Nov 11, 2024)<br>- UI refresh<br><br>Version 1.0.3 (Sep 27, 2023)<br>- Updated parameter naming<br><br>Version 1.0.1 (Mar 23, 2023)<br>- Apple Silicon Support for AAX<br><br>Version 1.0 (Nov 16, 2022)<br>- Initial release",
+    "Name": "XTComp",
+    "Changelog": "Kiive XTComp - Changelog<br><br>Version 1.0.1 (Jun 7, 2024)<br>- Fixed Brit mode button linking <br>- Fixed mix knob not working properly <br>- Fixed oversampling not rendering<br>- Fixed parameter recall in PT<br><br>Version 1.0.0 (Feb 8, 2024)<br>- Initial release<br><br><br>",
+    "HasChangelog": true
+  },
+  {
+    "Name": "Passive Equalizer",
+    "Changelog": "Bettermaker Passive Equalizer - Changelog<br><br>Version 1.0.0 (Aug 22, 2024)<br> - Initial release<br>",
     "HasChangelog": true
   },
   {
@@ -100,23 +75,28 @@
     "HasChangelog": true
   },
   {
-    "Name": "U2A",
-    "Changelog": "NEOLD U2A - Changelog<br><br>Version 1.1 (Mar 6, 2024)<br>- Fix: Black Boxes around the Plugin GUI in VST3 in Cubase on Windows<br>- Remove 32-Bit support on Windows<br>- Add double click -&gt; reset to default feature<br>- Add mouse sensitivity item to main menu<br><br>Version 1.0 (Apr 27, 2023)<br>- Initial released version<br>",
+    "Name": "WARBLE",
+    "Changelog": "NEOLD WARBLE - Changelog<br><br>Version 1.3 (Mar 6, 2024)<br>- Fix: Black Boxes around the Plugin GUI in VST3 in Cubase on Windows<br>- Fix: Crash when removing plugin instance while the GUI is open in FLStudio <br>- Remove 32-Bit support on Windows<br>- Add double click -&gt; reset to default feature<br>- Add mouse sensitivity item to main menu<br><br>Version 1.2 (Mar 16, 2023)<br>- Added native Apple Silicon support in AAX<br><br>Version 1.1 (Jun 15, 2022)<br>- Added Apple Silicon support<br><br>Version 1.0 (Oct 29, 2021)<br>- Initial released version<br>",
     "HasChangelog": true
   },
   {
-    "Name": "Trinity Shaper",
-    "Changelog": "Three-Body Technology Trinity Shaper - Changelog<br><br>Version 1.0.0 (Sep 12, 2024)<br> - Initial release<br>",
+    "Name": "MU-66",
+    "Changelog": "Lindell MU-66 - Changelog<br><br>Version 1.0.0 (Jun 18, 2024)<br>- Initial release<br><br><br>",
     "HasChangelog": true
   },
   {
-    "Name": "Vac Attack",
-    "Changelog": "Mixland Vac Attack - Changelog<br><br>Version 1.0.1 (Feb 23, 2024)<br>- Fixed EQ buttons not working after reloading VST3<br><br>Version 1.0.0 Sep 25, (2023)<br>- Initial Release",
+    "Name": "splat",
+    "Changelog": "fiedler audio splat - Changelog<br><br>Version 1.0.0 (Sep 4, 2024)<br> - Initial release<br>",
     "HasChangelog": true
   },
   {
-    "Name": "Cenozoix Compressor",
-    "Changelog": "Three Body Technology Cenozoix Compressor - Changelog<br><br>Version 1.1.0 (Apr 19, 2024)<br>- Implemented \"Drive\" modelling: Extra harmonic distortions for each of 24 vintage and modern compressor styles with adjustable drive levels. Enables you to mix and match a compressor style with a different drive style<br>- Implemented \"Post-Makeup Dry Mix\" that allows to mix dry and wet signals after makeup processing.<br>- Implemented compact mode with hidden waveform and threshold panels<br><br>Version 1.0.1 (Feb 21, 2024)<br>Bug Fixes<br>- Oversampling now works correctly. Fixed the issue that some internal DSP codes remain at the original sample rate instead of being initialized to a higher sample rate when oversampling is enabled, which may cause the missing low end.<br>- Fixed an issue with latency compensation which causes phase issues when mixing dry and wet signals.<br>- Undo in Logic now works correctly.<br>- Fixed the incorrect display of Hold parameter when reopening the GUI.<br>- Now knob fine tuning with Shift works correctly on macOS.<br>Optimizations<br>- New oversampling IR kernel that improves the sound quality while slightly increasing the latency.<br>- Now supports the gain reduction meter display in Studio One.<br><br>Version 1.0.0 (Feb 6, 2024)<br>- Initial Release",
+    "Name": "Kirchhoff-EQ",
+    "Changelog": "Three Body Technology Kirchhoff-EQ - Changelog<br><br>Version 1.7.1 (Dec 2, 2024)<br>Bug Fixes:<br>- Fixed a bug where adjusting parameters in linear phase mode caused loud popping noises.<br>- Fixed a bug where enabling Lookahead could cause crashes in certain cases.<br>- Fixed a bug where the vertical axis displays incorrectly on the spectrum analyzer in certain cases.<br>- Avoided an issue where the menu bar could block the window after entering full-screen mode on certain Mac devices.<br>- Fixed a bug where dialog boxes displayed incorrectly in some cases.<br>- Fixed a bug where the About page displayed incorrectly under certain conditions.<br>Improvements:<br>- Left, Right, Mid, and Side can now be selected as the default stereo mode.<br>- The ‘alt’ key is now displayed as ‘option’ in the settings on Mac version.<br><br>Version 1.7.0 (Jul 9, 2024)<br>Optimizations:<br>- Improved performance on touchscreens.<br>- New vector font.<br>- New pitch display in spectrum grab mode.<br>- Default filter types created by dragging at low and high frequencies now can also be customized.<br>- Optimized Tilt's edit section.<br>- Optimized performances of some popup windows.<br>- Completely revised settings menu.<br>- New 'Factory Reset Default State' button in settings menu.<br>- 'Initialize' now renamed to more accurate 'Clear All Bands'; new 'Reset to Default' function.<br><br>Bug Fixes:<br>- Fixed an issue that freezes the render thread in certain cases.<br>- Fixed the issue that corrupted default state file might disable the plugin.<br>- All knobs and sliders now respond to the 'reverse mouse wheel' setting.<br>- Operations on Lookahead switch, Output Gain knob and Output Pan knob now can be correctly undo/redo or saved between A/B switching.<br>- Fixed the audio glitch that might occur following adjustments on band's pan in non-minimum phase modes.<br>- Fixed the issue that when monitoring certain types of bands, the monitored frequency range won't change along with the Q value.<br>- Fixed the issue that in full screen mode, removing tracks or plugins in the DAW might cause a crash.<br>- Fixed multiple display issues in full screen mode.<br>- Fixed the issue that full screen mode won't be on top in certain DAW's.<br>- Fixed incorrect scales of menus and popup windows under certain display settings.<br>- Fixed incorrect mouse dragging behavior on knobs under certain screen resolutions.<br>- Fixed an issue that the actual cursor position might be inconsistent with the position the plugin responded to when used on multiple screens with different display scales.<br>- Fixed incorrect spectrum refresh rates in certain special cases.<br>- Fixed multiple issues under Rosetta translation environment on macOS.<br><br>Version 1.6.4 (Mar 28, 2023)<br>New Features<br>- Now AAX plugin is available for native Apple Silicon.<br>- Allow to customize spectrum refresh rate in Global tab of settings menu.<br>The available values are between 30FPS and the highest refresh rate of your monitor(s). Changes on this setting would affect Kirchhoff-EQ on all instances in real time.<br>- Added 7 preset themes.<br><br>Optimization<br>- Rebuilt OpenGL rendering scheme that improves software stability on integrated graphics cards.<br><br>Bug Fixes<br>- Now global scale applies to all menus.<br>- Now the user manual could be opened correctly through PA licensing toobar.<br>- Fixed unexpected refresh rate changes when making mouse operations on spectrum panel.<br><br>Version 1.6.2 (Mar 08, 2023)<br>Optimizations<br>- The inactive knobs of the current filter type are grayed out.<br>- Sharper Q value of monitoring.<br>- Slightly improved GUI rendering speed.<br>- Improved stability in native ARM64 Logic Pro.<br>- Show CPU type in About page to distinguish native/rosetta translated version.<br><br>Bug Fixes<br>- Fixed the issue that certain parameters does not respond to DAW's automation.<br>- Fixed occasional high CPU consumption in audio thread.<br>- Fixed incorrect panel backgrounds.<br>- Fixed the issue that manually typed output gain and pan values cannot be correctly applied.<br>- Fixed the issue that copied band cannot be correctly pasted on certain devices.<br>- Fixed the issue that minus values cannot be typed into certain text boxes.<br>- Fixed default path for background image customization on Mac.<br>- Fixed improper popup window in Ableton Live that causes missing plugin.<br>- Changing Q with mouse dragging now behaves the same with mouse wheel.<br><br>Version 1.6.0 <br>- Initial PA Release",
+    "HasChangelog": true
+  },
+  {
+    "Name": "Battalion",
+    "Changelog": "Unfiltered Audio Battalion - Changelog<br><br>Version 1.0.7 (Nov 4, 2024)<br>- Hotfix. Voice Presets created in V1.0.4 and earlier were not loading correctly in V1.0.5 and V1.0.6<br><br>Version 1.0.6 (Sep 17, 2024)<br>- Hotfix. Battalion was not resizing correctly in formats other than VST3.<br><br>Version 1.0.5 (Sep 11, 2024)<br>- Add NKS support.<br>- Add Scrapyard synth engine, a blend of FM and Modal.<br>- Add MiniGlitch and MegaGlitch distortion effects.<br>- Add Contrast distortion effect.<br>- Add Square distortion effect.<br>- Add Dropout distortion effect.<br>- Add MIDI note controls to start or stop playback.<br>- Add MIDI note controls to toggle Mute and Solo status.<br>- Add MIDI note controls to control randomization and performance.<br>- Add MIDI note controls to change presets.<br>- Add MIDI note controls to manually choke drum channels.<br>- The play/stop status is now saved with DAW projects.<br>- The reverb control no longer jumps unpredictably when clicked and behaves more like the other knobs.<br>- Fixed a bug where sampler controls were not updating with correct engine tooltips.<br>- Fixed a hard crash in Pro Tools when clicking a drop-down on the sequencer page.<br>- Added a \"Show User Sample Folder\" shortcut to the sample selection menu.<br>- Fixed a bug where \"Free Run\" LFOs weren't resetting when the DAW's transport was restarted.<br>- \"Load Sample...\" now remembers the last folder opened during a session.<br>- Significant optimizations to GUI rendering.<br>- Performance: removed unnecessary repaints on envelope visualizers, sample visualizer, and play button (50% CPU gain)  <br>- Performance: fixed infinite loop bug in sample loader <br>- Performance: fixed bug causing some minimized states on interface to use +100% CPU<br><br>Version 1.0.4 (May 6, 2024)<br>- Fixed race condition crash when turning Performance Steps negative or other sequencer conditions leading to a undefined rotation<br>- Fixed lockup when randomizing presets rapidly<br>- Stop button works correctly again<br>- Performance controls don't affect label printing on sequencer page<br><br>Version 1.0.3 (Apr 16, 2024)<br>- Initial Release",
     "HasChangelog": true
   },
   {
@@ -125,8 +105,58 @@
     "HasChangelog": true
   },
   {
-    "Name": "bx_XL V3",
-    "Changelog": "Brainworx bx_XL V3 - Changelog<br><br>Version 3.0.1 (Jul 01, 2024)<br>- Fixed font drawing at 75% and 125% UI scaling<br>- Fixed gain reduction meters not showing up correctly in Pro Tools<br>- Fixed weird behaviour of parameter banks and reset control<br>- Fixed sidechain metering not resetting correctly with suspended processing<br>- Updated Manual<br><br>Version 3.0 (Jun 4, 2024)<br>- Initial release<br>",
+    "Name": "Trinity Shaper",
+    "Changelog": "Three-Body Technology Trinity Shaper - Changelog<br><br>Version 1.1.0 (Jan 17, 2025)<br>New Features:<br>- Added gain adjustment knobs for each band in multi-band mode.<br>- Added a button to toggle the processing order between Makeup and Limiter.<br>Bug Fixes:<br>- Fixed a bug where the monitoring status displayed incorrectly after reopening the window. <br>- Fixed a bug where dialog boxes displayed incorrectly in some cases. <br>- Fixed a bug where preset names and modification statuses were displayed incorrectly. <br>Improvements:<br>- A setting has been added for the side chain EQ that, when enabled, will display a parameter value monitor for the selected band, supporting drag-and-drop editing and double-click input editing.<br>- Added a status indicator to show when sidechain mode and sidechain EQ are active (displayed on the sidechain button).<br>- Improved visibility of frequency settings for bands in multi-band mode.<br>- The ‘alt’ key is now displayed as ‘option’ in the settings on Mac version.<br>- Added the ability to set background images in the theme settings.<br><br>Version 1.0.0 (Sep 12, 2024)<br> - Initial release<br>",
+    "HasChangelog": true
+  },
+  {
+    "Name": "Thorn",
+    "Changelog": "DS Audio : DS Thorn - Changelog<br><br>Version 1.3.3 (Mar 22, 2024)<br><br>- Fix issue where sometimes ARP might skip first incoming note<br>- Fix issue where in some cases resources.bin was not found during instantiation<br><br>Version 1.3.2 (Aug 23, 2023)<br><br>- Added Apple Silicon support for AAX<br><br>Version 1-3-1 (Jan 20, 2022)<br><br>- Preset switching with keyboard keys works now<br>- Fix issues with recalling VST3 session chunks in some DAWs<br><br>Version 1.3.0 (Sep 18, 2021)<br><br>- Fixed volume control automation issue for AAX<br>- Fixed incorrect PA activation message UI scaling<br>- Fixed automation issue",
+    "HasChangelog": true
+  },
+  {
+    "Name": "BiG",
+    "Changelog": "SPL BiG - Changelog<br><br>Version 1.0.1 (Dec 11, 2024)<br>- Fix: removed 'Surround' Plug-In Category for Cubase<br>- Fix: minor peak meter refinement<br><br>Version 1.0.0 (Nov 12, 2024)<br>- Initial Release",
+    "HasChangelog": true
+  },
+  {
+    "Name": "U2A",
+    "Changelog": "NEOLD U2A - Changelog<br><br>Version 1.1 (Mar 6, 2024)<br>- Fix: Black Boxes around the Plugin GUI in VST3 in Cubase on Windows<br>- Remove 32-Bit support on Windows<br>- Add double click -&gt; reset to default feature<br>- Add mouse sensitivity item to main menu<br><br>Version 1.0 (Apr 27, 2023)<br>- Initial released version<br>",
+    "HasChangelog": true
+  },
+  {
+    "Name": "bx_boom V3",
+    "Changelog": "bx_boom V3 - Changelog<br><br>Version 3.0.0 (Oct 10, 2024)<br>- Initial release",
+    "HasChangelog": true
+  },
+  {
+    "Name": "splat",
+    "Changelog": "fiedler audio splat - Changelog<br><br>Version 1.0.0 (Sep 4, 2024)<br> - Initial release<br>",
+    "HasChangelog": true
+  },
+  {
+    "Name": "Vac Attack",
+    "Changelog": "Mixland Vac Attack - Changelog<br><br>Version 1.0.1 (Feb 23, 2024)<br>- Fixed EQ buttons not working after reloading VST3<br><br>Version 1.0.0 Sep 25, (2023)<br>- Initial Release",
+    "HasChangelog": true
+  },
+  {
+    "Name": "bx_aura",
+    "Changelog": "bx_aura - Changelog<br><br>Version 1.1.0 (Sep 23, 2024)<br>- Added missing parameter units to generic UI<br>- Fixed a bug where Pro Tools would block the plugin due to an unactivated license<br>- Fixed a bug where the positions of EQ and Drive didn't update when plugin processing was suspended<br>- General: Added usage data tracking<br><br>Version 1.0.0 (June 13, 2024)<br>- Initial release",
+    "HasChangelog": true
+  },
+  {
+    "Name": "U17",
+    "Changelog": "NEOLD U17 - Changelog<br><br>Version 1.2 (Mar 6, 2024)<br>- Fix: Black Boxes around the Plugin GUI in VST3 in Cubase on Windows<br>- Remove 32-Bit support on Windows<br>- Add double click -&gt; reset to default feature<br>- Add mouse sensitivity item to main menu<br><br>Version 1.1 (Mar 16, 2023)<br>- Added native Apple Silicon support in AAX<br><br>Version 1.0 (Jul 15, 2022)<br>- Release version<br>",
+    "HasChangelog": true
+  },
+  {
+    "Name": "Cenozoix Compressor",
+    "Changelog": "Three Body Technology Cenozoix Compressor - Changelog<br><br>Version 1.1.1 (Jan 17, 2025)<br>Bug Fixes:<br>- Fixed a bug where dialog boxes displayed incorrectly in some cases. <br>- Fixed a bug where preset names and modification statuses were displayed incorrectly. <br>Improvements:<br>- A setting has been added for the side chain EQ that, when enabled, will display a parameter value monitor for the selected band, supporting drag-and-drop editing and double-click input editing.<br>- Added a status indicator to show when sidechain mode and sidechain EQ are active (Displayed on the sidechain button).<br>- Added 3dB, 1dB and 0 dB options for the waveform display's maximum dB setting (in display panel).<br>- Added -6 dB and -3 dB options for the waveform display's minimum dB setting (in display panel).<br>- The ‘alt’ key is now displayed as ‘option’ in the settings on Mac version.<br>- Added the ability to set background images in the theme settings.<br><br>Version 1.1.0 (Apr 19, 2024)<br>- Implemented \"Drive\" modelling: Extra harmonic distortions for each of 24 vintage and modern compressor styles with adjustable drive levels. Enables you to mix and match a compressor style with a different drive style<br>- Implemented \"Post-Makeup Dry Mix\" that allows to mix dry and wet signals after makeup processing.<br>- Implemented compact mode with hidden waveform and threshold panels<br><br>Version 1.0.1 (Feb 21, 2024)<br>Bug Fixes<br>- Oversampling now works correctly. Fixed the issue that some internal DSP codes remain at the original sample rate instead of being initialized to a higher sample rate when oversampling is enabled, which may cause the missing low end.<br>- Fixed an issue with latency compensation which causes phase issues when mixing dry and wet signals.<br>- Undo in Logic now works correctly.<br>- Fixed the incorrect display of Hold parameter when reopening the GUI.<br>- Now knob fine tuning with Shift works correctly on macOS.<br>Optimizations<br>- New oversampling IR kernel that improves the sound quality while slightly increasing the latency.<br>- Now supports the gain reduction meter display in Studio One.<br><br>Version 1.0.0 (Feb 6, 2024)<br>- Initial Release",
+    "HasChangelog": true
+  },
+  {
+    "Name": "MBC",
+    "Changelog": "Lindell MBC - Changelog<br><br>Version 1.0.4 (Nov 11, 2024)<br>- UI refresh<br><br>Version 1.0.3 (Sep 27, 2023)<br>- Updated parameter naming<br><br>Version 1.0.1 (Mar 23, 2023)<br>- Apple Silicon Support for AAX<br><br>Version 1.0 (Nov 16, 2022)<br>- Initial release",
     "HasChangelog": true
   },
   {
@@ -135,8 +165,23 @@
     "HasChangelog": true
   },
   {
-    "Name": "BiG",
-    "Changelog": "SPL BiG - Changelog<br><br>Version 1.0.1 (Dec 11, 2024)<br>- Fix: removed 'Surround' Plug-In Category for Cubase<br>- Fix: minor peak meter refinement<br><br>Version 1.0.0 (Nov 12, 2024)<br>- Initial Release",
+    "Name": "HG-Q",
+    "Changelog": "Black Box Analog Design HG-Q - Changelog<br><br>Version 1.0.1 (Nov 28, 2024)<br>- Fixed graphical perfomance issues<br>- Fixed stuck boost gain callout after switching to expanded mode<br>- Fixed that the band active buttons do not turn off when the plugin is bypassed.<br>- Fixed static highlighted pixels in all eq curves<br>- Fixed crash when switching channelcount in mono gui (reaper)<br><br>Version 1.0 (Nov 4, 2024)<br>- Initial Release<br>",
+    "HasChangelog": true
+  },
+  {
+    "Name": "50 Series",
+    "Changelog": "Lindell Audio 50 Series - Changelog<br><br>Version 1.0.4 (Nov 11, 2024)<br>- UI refresh<br><br>Version 1.0.3 (Mar 23, 2023)<br>- Apple Silicon Support for AAX<br><br>Version 1.0.2 (Feb 24, 2023)<br>- Apple Silicon support for AU and VST2/3<br><br>Version 1.0.1 (Jan 18, 2021)<br>-fixed TMT in line amp and transformer (Channel + Buss)<br>-fixed an issue with save/recall<br><br>Version 1.0 (Jan 8, 2021)<br>- Initial Release<br><br><br>",
+    "HasChangelog": true
+  },
+  {
+    "Name": "Wavesurfer",
+    "Changelog": "Karanyi Sounds Wavesurfer - Changelog<br><br>Version 1.0.0 (Dec 17, 2024)<br> - Initial release<br>",
+    "HasChangelog": true
+  },
+  {
+    "Name": "Wavesurfer",
+    "Changelog": "Karanyi Sounds Wavesurfer - Changelog<br><br>Version 1.0.0 (Dec 17, 2024)<br> - Initial release<br>",
     "HasChangelog": true
   },
   {
@@ -150,53 +195,13 @@
     "HasChangelog": true
   },
   {
-    "Name": "U17",
-    "Changelog": "NEOLD U17 - Changelog<br><br>Version 1.2 (Mar 6, 2024)<br>- Fix: Black Boxes around the Plugin GUI in VST3 in Cubase on Windows<br>- Remove 32-Bit support on Windows<br>- Add double click -&gt; reset to default feature<br>- Add mouse sensitivity item to main menu<br><br>Version 1.1 (Mar 16, 2023)<br>- Added native Apple Silicon support in AAX<br><br>Version 1.0 (Jul 15, 2022)<br>- Release version<br>",
-    "HasChangelog": true
-  },
-  {
-    "Name": "WARBLE",
-    "Changelog": "NEOLD WARBLE - Changelog<br><br>Version 1.3 (Mar 6, 2024)<br>- Fix: Black Boxes around the Plugin GUI in VST3 in Cubase on Windows<br>- Fix: Crash when removing plugin instance while the GUI is open in FLStudio <br>- Remove 32-Bit support on Windows<br>- Add double click -&gt; reset to default feature<br>- Add mouse sensitivity item to main menu<br><br>Version 1.2 (Mar 16, 2023)<br>- Added native Apple Silicon support in AAX<br><br>Version 1.1 (Jun 15, 2022)<br>- Added Apple Silicon support<br><br>Version 1.0 (Oct 29, 2021)<br>- Initial released version<br>",
-    "HasChangelog": true
-  },
-  {
-    "Name": "bx_boom V3",
-    "Changelog": "bx_boom V3 - Changelog<br><br>Version 3.0.0 (Oct 10, 2024)<br>- Initial release",
-    "HasChangelog": true
-  },
-  {
-    "Name": "50 Series",
-    "Changelog": "Lindell Audio 50 Series - Changelog<br><br>Version 1.0.4 (Nov 11, 2024)<br>- UI refresh<br><br>Version 1.0.3 (Mar 23, 2023)<br>- Apple Silicon Support for AAX<br><br>Version 1.0.2 (Feb 24, 2023)<br>- Apple Silicon support for AU and VST2/3<br><br>Version 1.0.1 (Jan 18, 2021)<br>-fixed TMT in line amp and transformer (Channel + Buss)<br>-fixed an issue with save/recall<br><br>Version 1.0 (Jan 8, 2021)<br>- Initial Release<br><br><br>",
-    "HasChangelog": true
-  },
-  {
-    "Name": "Kirchhoff-EQ",
-    "Changelog": "Three Body Technology Kirchhoff-EQ - Changelog<br><br>Version 1.7.1 (Dec 2, 2024)<br>Bug Fixes:<br>- Fixed a bug where adjusting parameters in linear phase mode caused loud popping noises.<br>- Fixed a bug where enabling Lookahead could cause crashes in certain cases.<br>- Fixed a bug where the vertical axis displays incorrectly on the spectrum analyzer in certain cases.<br>- Avoided an issue where the menu bar could block the window after entering full-screen mode on certain Mac devices.<br>- Fixed a bug where dialog boxes displayed incorrectly in some cases.<br>- Fixed a bug where the About page displayed incorrectly under certain conditions.<br>Improvements:<br>- Left, Right, Mid, and Side can now be selected as the default stereo mode.<br>- The ‘alt’ key is now displayed as ‘option’ in the settings on Mac version.<br><br>Version 1.7.0 (Jul 9, 2024)<br>Optimizations:<br>- Improved performance on touchscreens.<br>- New vector font.<br>- New pitch display in spectrum grab mode.<br>- Default filter types created by dragging at low and high frequencies now can also be customized.<br>- Optimized Tilt's edit section.<br>- Optimized performances of some popup windows.<br>- Completely revised settings menu.<br>- New 'Factory Reset Default State' button in settings menu.<br>- 'Initialize' now renamed to more accurate 'Clear All Bands'; new 'Reset to Default' function.<br><br>Bug Fixes:<br>- Fixed an issue that freezes the render thread in certain cases.<br>- Fixed the issue that corrupted default state file might disable the plugin.<br>- All knobs and sliders now respond to the 'reverse mouse wheel' setting.<br>- Operations on Lookahead switch, Output Gain knob and Output Pan knob now can be correctly undo/redo or saved between A/B switching.<br>- Fixed the audio glitch that might occur following adjustments on band's pan in non-minimum phase modes.<br>- Fixed the issue that when monitoring certain types of bands, the monitored frequency range won't change along with the Q value.<br>- Fixed the issue that in full screen mode, removing tracks or plugins in the DAW might cause a crash.<br>- Fixed multiple display issues in full screen mode.<br>- Fixed the issue that full screen mode won't be on top in certain DAW's.<br>- Fixed incorrect scales of menus and popup windows under certain display settings.<br>- Fixed incorrect mouse dragging behavior on knobs under certain screen resolutions.<br>- Fixed an issue that the actual cursor position might be inconsistent with the position the plugin responded to when used on multiple screens with different display scales.<br>- Fixed incorrect spectrum refresh rates in certain special cases.<br>- Fixed multiple issues under Rosetta translation environment on macOS.<br><br>Version 1.6.4 (Mar 28, 2023)<br>New Features<br>- Now AAX plugin is available for native Apple Silicon.<br>- Allow to customize spectrum refresh rate in Global tab of settings menu.<br>The available values are between 30FPS and the highest refresh rate of your monitor(s). Changes on this setting would affect Kirchhoff-EQ on all instances in real time.<br>- Added 7 preset themes.<br><br>Optimization<br>- Rebuilt OpenGL rendering scheme that improves software stability on integrated graphics cards.<br><br>Bug Fixes<br>- Now global scale applies to all menus.<br>- Now the user manual could be opened correctly through PA licensing toobar.<br>- Fixed unexpected refresh rate changes when making mouse operations on spectrum panel.<br><br>Version 1.6.2 (Mar 08, 2023)<br>Optimizations<br>- The inactive knobs of the current filter type are grayed out.<br>- Sharper Q value of monitoring.<br>- Slightly improved GUI rendering speed.<br>- Improved stability in native ARM64 Logic Pro.<br>- Show CPU type in About page to distinguish native/rosetta translated version.<br><br>Bug Fixes<br>- Fixed the issue that certain parameters does not respond to DAW's automation.<br>- Fixed occasional high CPU consumption in audio thread.<br>- Fixed incorrect panel backgrounds.<br>- Fixed the issue that manually typed output gain and pan values cannot be correctly applied.<br>- Fixed the issue that copied band cannot be correctly pasted on certain devices.<br>- Fixed the issue that minus values cannot be typed into certain text boxes.<br>- Fixed default path for background image customization on Mac.<br>- Fixed improper popup window in Ableton Live that causes missing plugin.<br>- Changing Q with mouse dragging now behaves the same with mouse wheel.<br><br>Version 1.6.0 <br>- Initial PA Release",
+    "Name": "HawkEye",
+    "Changelog": "SPL HawkEye - Changelog<br><br>Version 1.1.0 (Feb 9, 2024)<br>- New Radar View visualization mode <br>- Apple Silicon compatibility<br><br>Version 1.0 (Jan 9, 2019)<br>- Initial release",
     "HasChangelog": true
   },
   {
     "Name": "EQ4",
     "Changelog": "Maag EQ4 - Changelog<br><br>Version 1.16.1 (Aug 26, 2024)<br>- Fixed audio being muted in AAX DSP<br><br>Version 1.16.0 (Aug 15, 2024)<br>- Note: Session compatibility confirmed<br>- Added bx_toolbar including ABCD-Bank parameter<br>- Added scalable UI feature<br>- Improved GUI performance<br>- Updated GUI design <br>- Improved Level Trim control<br>- Added switchable \"Black Edition\" GUI design<br>- General : improved performance<br>- General : changed audio behavior for unlicensed plugins<br>- General : added usage data tracking<br>- General : deprecated macOS 11.0 (new minimum: 11.1)<br><br>Version 1.15.1 (Oct 9, 2023)<br>- General: fixed CPU spikes on Mac OS<br><br>Version 1.15.0 (Aug 15, 2023)<br>- General: added native Apple Silicon compatibility for AAX<br>- General: added macOS Ventura support<br>- General: improved plugin loading time in the DAW<br>- General: fixed issue causing Logic to crash when closing the plugin UI<br>- General: improved font drawing behavior<br><br>Version 1.14 (Mar 15, 2022)<br>- General: added native Apple Silicon compatibility for VST3, VST2 and AU<br>- General: added macOS Monterey support<br>- General: added Windows 11 and Windows 10 21H1 support <br>- General: discontinued Windows 7 support<br>- General: discontinued macOS 10.9 and 10.11 support<br>- General: fixed metering behavior in block sizes of 2048 samples and higher<br><br>Version 1.13 (Mar 22, 2021)<br>- General: Compatibility with Logic on Apple Silicon devices via the Rosetta-2 layer<br>- General: Fixed possible artefacts when freezing or bouncing tracks in Pro Tools<br>- General: Fixed automation highlighting disappearing in Studio One<br>- General: Improved license dialog visibility in dark mode<br>- Improved metering behavior<br><br>Version 1.12 (May 27, 2020)<br>- General: Qualified for use with the Windows 10 May 2020 Update<br>- General: VST3: Fixed potential hangs in a DAW upon loading<br>- General: Fixed logical issues in undo / redo behavior<br>- General: Fixed UI resizing issues in Ableton Live on Windows<br>- General: Fixed audio processing initialization issues on amp and delay products<br><br>Version 1.11 (Nov 06, 2019)<br>- General: Qualified for use with macOS 10.15 Catalina<br>- General: Qualified for use with Windows 10 November 2019 Update<br>- General: Fixed plugin validation in Logic under macOS Catalina<br>- General: Fixed preset name restore in Logic when reopening a session<br>- General: Fixed opening authorization dialog triggering automation<br>- General: Improved instantiation times for plugins<br>- General: Improved license functionality and branding for subscription<br>- General: Removed 32-bit support on macOS and Windows<br><br>Version 1.10 (Jul 10, 2019)<br>- General: macOS 10.14.5 Update compatibility<br>- General: Windows 10 1903 Update compatibility<br>- General: Fixed activation issue in Windows hosts set to non-English language (e.g. Cakewalk)<br>- General: AU: Fixed issue with increased CPU and memory on reopening UI<br>- General: VST3: Fixed issue with adapting to host knob mode, and now prioritizing linear<br>- General: VST3: Fixed issue with VST3 preset permissions<br>- General: VST3: Improved synchronization between parameter states and some UI functions, e.g. toolbar reset<br><br>Version 1.9 (Nov 16, 2018)<br>- General: macOS Mojave compatibility<br>- General: Windows October 2018 update compatibility<br>- General: adding Windows High DPI support for VST2/3 plugins<br>- General: Fixed potential crashes in Cubase and other VST2 / VST3 DAWs<br>- General: Fixed potential CPU spikes and audio dropouts<br>- General: Fixed rendering in Pro Tools on the start of a session<br>- General: Fixed missing presets in Wavelab and other VST3 DAWs<br>- General: Improving keyboard control, fixing issues with catched keys preventing it from passing through to DAW<br>- General: Fixed parallel use of host sessions (e.g. with Live)<br><br>Version 1.8 (May 24, 2018)<br>- General: Microsoft Windows Redstone 4 compatibility<br>- General: Added computer keyboard control for plugin parameters<br>- General: Fixed Mouse scroll wheel not working in Windows 8<br>- General: Fixed an issue where plugins will not validate or load after a certain amount of plugins have been loaded (Windows)<br>- General: Fixed visual GUI freezes when adjusting DAW parameters, meters, analyzers (Mac)<br>- General: Fixed possible issue with Pick Pack licenses<br>- General: Small licenser stability fix<br>- Added Pro Tools Multi-Channel support<br><br>Version 1.7 (Oct 23, 2017)<br>- General: Mac OS High Sierra compatibility<br>- General: Fixed possible crash on online activation (Mac OS High Sierra)<br>- General: Fixed Logic Pro X not validating AU plugins (Mac OS High Sierra)<br>- General: Fixed CPU spikes and crashes with Cubase (Windows)<br>- General: Fixed bug that could lead to \"AAE -6 error\" in ProTools (Windows)<br>- General: Fixed crash with FL Studio<br>- General: Fixed crash when cross-opening plugins in various hosts<br>- General: Fixed crash when using mixdown in Audition<br>- General: Fixed crash in Final Cut Pro<br>- General: Fixed delayed parameter handling and crackling issues in Cubase with VST3<br>- General: Fixed bug where plugin settings were not saved in Harrison Mixbus<br>- General: Fixed bug that led to AAE error -9317 in ProTools when instantiating plugin<br>- General: Fixed bug where plugins did not render properly when \"x ray\" option is enabled in Sonar<br>- General: Modifications to factory presets were lost when reopening session<br>- General: Fixed mouse wheel behaviour with second monitor setup (Windows)<br>- Some plugins: Value labels do not appear every time when clicking on parameter in UI<br>- General: Faster instantiation time for plugins (Windows)<br>- General: Adding support for automation highlighting in Presonus StudioOne<br>- Fixed bug that caused Waves LV1 Mixer to hang<br><br>Version 1.6.1 (Dec 20, 2016)<br>- General: Mac OS Sierra compatibility<br>- General: Fixed automation issues in AU and AAX<br>- General: Fixed license dialog use of special characters<br>- General: Improved AU preset support<br>- General: Performance improvements<br><br>Version 1.6 (Apr 1, 2016)<br>- Added SoundGrid support<br>- General: Major UI codebase update<br>- General: Fixed possible crash when authorizing plugin<br>- General: Added gain reduction meter support for StudioOne 3<br>- General: Installers show version info in Windows \"Programs And Features\"<br>- Added EUCON pagetables<br><br>Version 1.5.4 (Jan 18, 2016)<br>- General codebase update<br>- Removing RTAS/TDM/VENUE 32-bit format support<br><br>Version 1.5.3 (Jul 18, 2015)<br>- General codebase update<br><br>Version 1.5.2 (Jun 22, 2015)<br>- General codebase update<br><br>Version 1.5.1 (May 27, 2015)<br>- Fixed wrong installation path for 32-bit Win VST plugin version<br><br>Version 1.5 (Nov 18, 2013)<br>- Licenser update (V3): Fixes and new features<br>- Prevent wrong mouse wheel behavior in 32-bit hosts on 64-bit Windows (Windows bug) (87, 95, 156)<br>- Fixed keyboard events after text input in Pro Tools Windows (325)<br>- Fixed parameter value display in VST3 (330)<br>- Fixed toolbar triggering automation (335)<br>- Fixed window size issues (279, 327)<br>- Fixed possible preset issues in Pro Tools 11 (312)<br>- Fixed spectral low-end response in TDM version (277)<br>- AAX DSP version improvements<br><br>Version 1.4.1 (Jun 28, 2013)<br>- fixed installer for 32-bit Windows<br><br>Version 1.4 (Jun 21, 2013)<br>- improved mapping to ICON center section<br>- added support for Pro Tools 11<br>- licenser update: fixes and new features<br>- fixed automation with VST3 offline processing<br><br>Version 1.3 (Apr 05, 2013)<br>- otimized performance<br>- fixed issues with possible high CPU load<br>- fixed Avid related issue in Pro Tools 10 that could lead to sporadic crashes<br>- fixed issue that could lead to values jumping in Ableton Live<br><br>Version 1.2.3 (Jan 16, 2013)<br>- added support for high resolution displays (e.g. Apple Retina)<br>- licenser: improved Pro Tools activation<br><br>Version 1.2.2 (Nov 08, 2012)<br>- fix AU issue (fixes AU validation)<br><br>Version 1.2.1 (Oct 31, 2012)<br>- fixed potential TDM automation issue under Mac OS<br>- licenser: minor fixes<br>- licenser: fixed activation issue under Mac OS 10.5 / Pro Tools 8<br>- licenser: fixed potential crash in online activation under Mac OS<br>- licenser: fixed issues with USB stick activation<br>- licenser: fixed file handling with offline activation<br><br>Version 1.2 (Oct 16, 2012)<br>- Added AAX DSP<br><br>Version 1.1.3 (Jun 22, 2012)<br>- Licenser update: added toolbar and USB activation<br>- Fixed response issues in AU format<br><br>Version 1.1.2 (Mar 19, 2012)<br>- Licenser Bugfix<br><br>Version 1.1.1 (Feb 27, 2012)<br>- TDM Fixes<br><br>Version 1.1 (Feb 20, 2012)<br>- Added TDM / VENUE Version<br><br>Version 1.0 (Feb 10, 2012)<br>- Initial release<br><br>",
-    "HasChangelog": true
-  },
-  {
-    "Name": "Thorn",
-    "Changelog": "DS Audio : DS Thorn - Changelog<br><br>Version 1.3.3 (Mar 22, 2024)<br><br>- Fix issue where sometimes ARP might skip first incoming note<br>- Fix issue where in some cases resources.bin was not found during instantiation<br><br>Version 1.3.2 (Aug 23, 2023)<br><br>- Added Apple Silicon support for AAX<br><br>Version 1-3-1 (Jan 20, 2022)<br><br>- Preset switching with keyboard keys works now<br>- Fix issues with recalling VST3 session chunks in some DAWs<br><br>Version 1.3.0 (Sep 18, 2021)<br><br>- Fixed volume control automation issue for AAX<br>- Fixed incorrect PA activation message UI scaling<br>- Fixed automation issue",
-    "HasChangelog": true
-  },
-  {
-    "Name": "splat",
-    "Changelog": "fiedler audio splat - Changelog<br><br>Version 1.0.0 (Sep 4, 2024)<br> - Initial release<br>",
-    "HasChangelog": true
-  },
-  {
-    "Name": "bx_aura",
-    "Changelog": "bx_aura - Changelog<br><br>Version 1.1.0 (Sep 23, 2024)<br>- Added missing parameter units to generic UI<br>- Fixed a bug where Pro Tools would block the plugin due to an unactivated license<br>- Fixed a bug where the positions of EQ and Drive didn't update when plugin processing was suspended<br>- General: Added usage data tracking<br><br>Version 1.0.0 (June 13, 2024)<br>- Initial release",
-    "HasChangelog": true
-  },
-  {
-    "Name": "HawkEye",
-    "Changelog": "SPL HawkEye - Changelog<br><br>Version 1.1.0 (Feb 9, 2024)<br>- New Radar View visualization mode <br>- Apple Silicon compatibility<br><br>Version 1.0 (Jan 9, 2019)<br>- Initial release",
     "HasChangelog": true
   }
 ]

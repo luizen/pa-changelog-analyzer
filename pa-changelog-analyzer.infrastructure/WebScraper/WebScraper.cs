@@ -2,11 +2,13 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using PaChangelogAnalyzer.Core.ValueObjects;
 using PaChangelogAnalyzer.Core.Interfaces;
-using AngleSharp;
 using PaChangelogAnalyzer.Infrastructure.Options;
-using AngleSharp.Html.Dom;
 using System.Collections.Concurrent;
 using System.Diagnostics;
+using AngleSharp;
+using AngleSharp.Io;
+using AngleSharp.Dom;
+using AngleSharp.Html.Dom;
 
 namespace PaChangelogAnalyzer.Infrastructure.WebScraper;
 
@@ -33,7 +35,27 @@ public class WebScraper : IWebScraper
         var config = Configuration.Default.WithDefaultLoader();
         var context = BrowsingContext.New(config);
 
-        using var allProductsPageDocument = await context.OpenAsync(options.Value.ProductsUrl);
+        var httpClient = new HttpClient();
+        httpClient.DefaultRequestHeaders.UserAgent.ParseAdd("curl/8.7.1");
+        httpClient.DefaultRequestHeaders.Accept.ParseAdd("*/*");
+        httpClient.DefaultRequestHeaders.Host = "www.plugin-alliance.com";
+
+        var userAgent = httpClient.DefaultRequestHeaders.UserAgent.ToString();
+        var accept = httpClient.DefaultRequestHeaders.Accept.ToString();
+        var host = httpClient.DefaultRequestHeaders.Host.ToString();
+
+        var requester = new DocumentRequest(new Url(options.Value.ProductsUrl));
+        requester.Headers["User-Agent"] = userAgent;
+        requester.Headers["Accept"] = accept;
+        requester.Headers["Host"] = host;
+
+        using var allProductsPageDocument = await context.OpenAsync(requester);
+
+        logger.LogDebug("HTTP status code: {StatusCode}", allProductsPageDocument.StatusCode);
+        logger.LogDebug("Page HTML: {HtmlContent}", allProductsPageDocument.DocumentElement.OuterHtml);
+
+        await Task.Delay(2000);
+
         var pluginLinks = allProductsPageDocument.QuerySelectorAll(options.Value.ProductLinkSelector);
 
         var pluginPagesToScrape = new ConcurrentBag<PluginLink>();
@@ -54,10 +76,13 @@ public class WebScraper : IWebScraper
         {
             tasks.Add(Task.Run(async () =>
             {
-                // var context = BrowsingContext.New(config);
+                var requesterPlugin = new DocumentRequest(new Url(currentPluginLink.Href));
+                requesterPlugin.Headers["User-Agent"] = userAgent;
+                requesterPlugin.Headers["Accept"] = accept;
+                requesterPlugin.Headers["Host"] = host;
 
                 // Load the page contents
-                using var pluginPageDocument = await context.OpenAsync(currentPluginLink.Href);
+                using var pluginPageDocument = await context.OpenAsync(requesterPlugin);
 
                 // Try to find the changelog element
                 var changeLogElement = pluginPageDocument.QuerySelector(options.Value.ChangelogSelector);
@@ -84,3 +109,5 @@ public class WebScraper : IWebScraper
         return result;
     }
 }
+
+

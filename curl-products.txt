@@ -1,0 +1,55 @@
+* Host www.plugin-alliance.com:443 was resolved.
+* IPv6: 2600:1419:6200:3e::214:8b2b, 2600:1419:6200:3e::214:8b28
+* IPv4: 23.219.67.2, 23.219.67.21
+*   Trying [2600:1419:6200:3e::214:8b2b]:443...
+* Connected to www.plugin-alliance.com (2600:1419:6200:3e::214:8b2b) port 443
+* ALPN: curl offers h2,http/1.1
+* (304) (OUT), TLS handshake, Client hello (1):
+*  CAfile: /etc/ssl/cert.pem
+*  CApath: none
+* (304) (IN), TLS handshake, Server hello (2):
+* (304) (IN), TLS handshake, Unknown (8):
+* (304) (IN), TLS handshake, Certificate (11):
+* (304) (IN), TLS handshake, CERT verify (15):
+* (304) (IN), TLS handshake, Finished (20):
+* (304) (OUT), TLS handshake, Finished (20):
+* SSL connection using TLSv1.3 / AEAD-CHACHA20-POLY1305-SHA256 / [blank] / UNDEF
+* ALPN: server accepted http/1.1
+* Server certificate:
+*  subject: CN=files.plugin-alliance.com
+*  start date: Jan 31 19:05:30 2025 GMT
+*  expire date: May  1 19:05:29 2025 GMT
+*  subjectAltName: host "www.plugin-alliance.com" matched cert's "www.plugin-alliance.com"
+*  issuer: C=US; O=Let's Encrypt; CN=R11
+*  SSL certificate verify ok.
+* using HTTP/1.x
+> GET /en/products.html HTTP/1.1
+> Host: www.plugin-alliance.com
+> User-Agent: curl/8.7.1
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/1.1 200 OK
+< Content-Type: text/html; charset=utf-8
+< Server: Apache
+< Strict-Transport-Security: max-age=31536000;
+< Expect-CT: enforce, max-age=86400, report-uri='https://pluginalliance.report-uri.com/r/d/ct/enforce'
+< X-Content-Type-Options: nosniff
+< Last-Modified: Mon, 10 Feb 2025 12:19:11 GMT
+< X-Frame-Options: SAMEORIGIN
+< Referrer-Policy: no-referrer-when-downgrade
+< X-XSS-Protection: 1; mode=block; report=https://pluginalliance.report-uri.com/r/d/xss/enforce
+< Vary: host
+< Vary: user-agent
+< Expires: Mon, 10 Feb 2025 12:19:11 GMT
+< Cache-Control: max-age=0, no-cache, no-store
+< Pragma: no-cache
+< Date: Mon, 10 Feb 2025 12:19:11 GMT
+< Transfer-Encoding:  chunked
+< Connection: keep-alive
+< Connection: Transfer-Encoding
+< Set-Cookie: AWSALB=BB8sLbJt+S2GtOkHaA3nuvzroOOrxG911OzvRaBxurnkaPQbbyteZbeZstNliCtpB7ja36Nu25FfHJavMJ3BOTZlLsEQyjmRsANxZxEYQuLt1hw6JfBqeMBimrrg; Expires=Mon, 17 Feb 2025 12:19:09 GMT; Path=/
+< Set-Cookie: AWSALBCORS=BB8sLbJt+S2GtOkHaA3nuvzroOOrxG911OzvRaBxurnkaPQbbyteZbeZstNliCtpB7ja36Nu25FfHJavMJ3BOTZlLsEQyjmRsANxZxEYQuLt1hw6JfBqeMBimrrg; Expires=Mon, 17 Feb 2025 12:19:09 GMT; Path=/; SameSite=None; Secure
+< Set-Cookie: PHPSESSID=c075dc6135ddc5ae2948c32970953b58; path=/; secure; HttpOnly;Secure;SameSite=None
+< 
+* Connection #0 to host www.plugin-alliance.com left intact
